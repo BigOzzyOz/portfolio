@@ -1,0 +1,9 @@
+<ul>
+  @for (link of socialLinks; track $index) {
+    <li>
+      <a href="{{link.src}}" target="_blank">
+        <img src="assets/icons/{{link.img}}.png" alt="{{link}}">
+      </a>
+    </li>
+  }
+</ul>
