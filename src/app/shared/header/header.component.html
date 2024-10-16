@@ -1,0 +1,12 @@
+<div class="header">
+  <img class="logo" src="assets/img/logo_jhro.png" alt="logo">
+  <nav>
+    <img class="burger" (mouseover)="toggleBurger($event)" (mouseout)="toggleBurger($event)"
+      (click)="toggleBurger($event)" [src]="burger" alt="">
+    <ul [class.active]="burgerMenu">
+      @for (link of headerLinks; track $index) {
+        <li><a href="#{{link}}">{{link}}</a></li>
+      }
+    </ul>
+  </nav>
+</div>
