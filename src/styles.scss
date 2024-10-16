@@ -10,6 +10,50 @@ $background-color: #141D2F;
   font-weight: 600;
   color: #fff;
   scroll-behavior: smooth;
+  word-break: break-word;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background-color;
+    border-radius: 8px;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color $background-color;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 body {
@@ -35,7 +79,7 @@ app-root {
     background-color: $background-color;
   }
 
-  app-main-content {
+  router-outlet {
     flex-grow: 1;
   }
 
@@ -131,7 +175,19 @@ button {
   }
 }
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
 
 @media (max-width: 575.98px) {
   app-root {

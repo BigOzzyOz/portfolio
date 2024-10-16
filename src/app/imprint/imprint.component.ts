@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-imprint',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class ImprintComponent {
 
+  source: string = 'assets/icons/back-arrow.png';
+
+  constructor(public lS: LanguageService) {
+  }
 }
