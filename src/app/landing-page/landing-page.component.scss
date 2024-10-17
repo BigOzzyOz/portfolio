@@ -5,22 +5,18 @@ $background-color: #141D2F;
 .landing-page {
   width: 100%;
   height: 100dvh;
-  margin: 120px 0 0 0;
+  padding: 120px 0 16px 0;
   display: flex;
-
-
+  flex-direction: column;
 
   .welcome {
     position: relative;
     width: 100%;
-    height: 75%;
+    height: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
-
-
 
   .hero {
     position: absolute;
@@ -40,9 +36,7 @@ $background-color: #141D2F;
       max-width: 800px;
       max-height: 800px;
       object-fit: contain;
-
     }
-
 
     .hero-image {
       position: absolute;
@@ -79,13 +73,16 @@ $background-color: #141D2F;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     text-align: center;
+    width: 100%;
 
 
     p:first-child {
       position: relative;
       left: 32px;
       font-size: 56px;
+      font-weight: 400;
       transform: rotate(-90deg);
 
     }
@@ -98,18 +95,106 @@ $background-color: #141D2F;
       h1 {
         font-size: 80px;
         line-height: 1;
-        letter-spacing: 4px;
       }
 
       p {
         color: $secondary-color;
         line-height: 1;
+        font-weight: 400;
       }
 
+
+    }
+
+
+  }
+
+  .filler {
+    width: 100%;
+    height: 0px;
+    flex: 1;
+  }
+
+  .filler-2 {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+  }
+}
+
+.primary {
+  font-size: 24px;
+  font-weight: 400;
+  width: 160px;
+  height: 64px;
+}
+
+.bottom-landing {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .left-bottom {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 32px;
+    width: 560px;
+
+
+    .oline {
+      width: 96px;
+      height: 4px;
+      position: absolute;
+      left: -96px;
+      background-color: $secondary-color;
+    }
+
+
+    .a-text {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+  }
+
+  .right-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 16px;
+    height: 100%;
+
+    p {
+      writing-mode: vertical-lr;
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    img {
+      width: 36px;
+      height: 36px;
     }
   }
 }
 
+
+.about-me-shadow-container {
+  position: absolute;
+  top: 65%;
+  right: -450px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  background-image: url("./../../assets/img/shadow_about_me.png");
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
@@ -148,6 +233,26 @@ $background-color: #141D2F;
         }
       }
     }
+
+    .filler-2 {
+      width: 600px;
+    }
+  }
+
+  .bottom-landing {
+
+    .left-bottom {
+      width: 600px;
+
+      .oline {
+
+        left: -56px;
+      }
+    }
+  }
+
+  .about-me-shadow {
+    right: -500px;
   }
 }
 
@@ -187,6 +292,7 @@ $background-color: #141D2F;
     }
 
     .hero-text {
+      justify-content: center;
 
       p:first-child {
         left: 0;
@@ -197,22 +303,48 @@ $background-color: #141D2F;
         font-size: 40px;
 
         h1 {
-          font-size: 64px;
+          font-size: 56px;
         }
       }
     }
+
+    .filler {
+      display: none;
+    }
+
+    .filler-2 {
+      width: 100%;
+    }
   }
 
+  .bottom-landing {
+
+    .left-bottom {
+      width: 624px;
+
+      .oline {
+        left: -32px;
+      }
+    }
+  }
 }
 
 /*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
   .welcome {
+    .hero {
 
+      .photo-shadows {
+        position: relative;
+        width: unset;
+        object-fit: cover;
+      }
+    }
 
     .hero-text-container {
       height: 30%;
       align-items: center;
+
     }
 
     .hero-text {
@@ -231,22 +363,52 @@ $background-color: #141D2F;
         }
       }
     }
+
+
+  }
+
+  .primary {
+    width: 120px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .bottom-landing {
+
+    .left-bottom {
+      width: 100%;
+      justify-content: center;
+
+      .a-text {
+        display: none;
+      }
+    }
+
+    .right-bottom {
+      display: none;
+    }
+  }
+
+  .about-me-shadow {
+    right: -475px;
   }
 }
 
 /*X-Small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .welcome {
+
     .hero {
 
-      .photo-shadows {
-        position: relative;
-        width: unset;
-        object-fit: cover;
+      .hero-image {
+        height: 50dvh;
+        left: -15dvw;
+        top: 0
       }
 
       .hero-background {
         right: -16px;
+        bottom: -25dvh;
       }
     }
 
@@ -254,7 +416,6 @@ $background-color: #141D2F;
       height: 30%;
       align-items: center;
       gap: 24px;
-
     }
 
     .hero-text {
@@ -271,7 +432,20 @@ $background-color: #141D2F;
         }
       }
     }
+  }
 
+  .bottom-landing {
 
+    .left-bottom {
+      justify-content: flex-end;
+
+      .oline {
+        left: -16px;
+      }
+    }
+  }
+
+  .about-me-shadow {
+    right: -525px;
   }
 }

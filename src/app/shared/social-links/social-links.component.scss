@@ -1,11 +1,24 @@
 ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 200px;
   gap: 16px;
   list-style: none;
 
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 
     img {
       width: 32px;

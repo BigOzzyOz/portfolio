@@ -36,7 +36,7 @@ $background-color: #141D2F;
   }
 
   @supports not selector(::-webkit-scrollbar) {
-    scrollbar-width: thin;
+    scrollbar-width: auto;
     scrollbar-color: $primary-color $background-color;
   }
 }
@@ -60,40 +60,40 @@ body {
   display: flex;
   justify-content: center;
   background-color: $background-color;
+  overflow: hidden auto;
 }
 
 app-root {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  height: auto;
   width: 100%;
   max-width: 1920px;
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0 96px;
 
   .app-header {
     position: fixed;
     top: 0px;
-    left: 8px;
-    right: 8px;
+    left: 0px;
+    right: 0px;
     margin: 0 auto;
-    max-width: 1904px;
+    max-width: 1920px;
     z-index: 10;
     background-color: $background-color;
-    padding: 0 88px;
+    padding: 0 96px;
   }
 
   router-outlet {
-    flex-grow: 1;
+    flex: 1;
   }
 
   .app-footer {
-    border-top: 2px solid$primary-color;
+    border-top: 4px solid$primary-color;
     flex-shrink: 0;
     width: calc(100% + 96px * 2);
     margin-left: -96px;
-    padding: 0 96px;
   }
 }
 
@@ -168,8 +168,6 @@ button {
   }
 }
 
-
-/*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
   app-root {
     padding: 0 56px;
@@ -181,24 +179,21 @@ button {
     .app-footer {
       width: calc(100% + 56px * 2);
       margin-left: -56px;
-      padding: 0 56px;
     }
   }
 }
-
 
 @media (max-width: 991.98px) {
   app-root {
     padding: 0 32px;
 
     .app-header {
-      padding: 0 24px;
+      padding: 0 32px;
     }
 
     .app-footer {
       width: calc(100% + 32px * 2);
       margin-left: -32px;
-      padding: 0 32px;
     }
   }
 }
@@ -222,17 +217,15 @@ button {
     padding: 0 16px;
 
     .app-header {
-      padding: 0 8px;
+      padding: 0 16px;
     }
 
     .app-footer {
       width: calc(100% + 16px * 2);
       margin-left: -16px;
-      padding: 0 16px;
     }
   }
 }
-
 
 /* poppins-100 - latin */
 @font-face {

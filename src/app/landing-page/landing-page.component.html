@@ -13,7 +13,25 @@
           <p>FRONTEND DEVELOPER</p>
         </div>
       </div>
-      <button class="primary">Let's talk!</button>
+      <div [ngStyle]="{'display': 'flex', width: '100%'}">
+        <div class="filler"></div>
+        <div class="filler-2">
+          <button class="primary">Let's talk!</button>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="bottom-landing">
+    <div class="left-bottom">
+      <div class="oline"></div>
+      <app-social-links></app-social-links>
+      <a class="a-text" href="mailto:kontakt@jan-holtschke.de">kontakt&commat;jan-holtschke.de
+      </a>
+    </div>
+    <div class="right-bottom">
+      <p>Scroll down</p>
+      <img src="assets/icons/arrow-down-line.png" alt="">
+    </div>
+  </div>
+  <div class="about-me-shadow-container"></div>
 </section>
