@@ -72,11 +72,16 @@ app-root {
   overflow-x: hidden;
   padding: 0 96px;
 
-  app-header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  .app-header {
+    position: fixed;
+    top: 0px;
+    left: 8px;
+    right: 8px;
+    margin: 0 auto;
+    max-width: 1904px;
+    z-index: 10;
     background-color: $background-color;
+    padding: 0 88px;
   }
 
   router-outlet {
@@ -163,9 +168,32 @@ button {
   }
 }
 
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+  app-root {
+    padding: 0 56px;
+
+    .app-header {
+      padding: 0 56px;
+    }
+
+    .app-footer {
+      width: calc(100% + 56px * 2);
+      margin-left: -56px;
+      padding: 0 56px;
+    }
+  }
+}
+
+
 @media (max-width: 991.98px) {
   app-root {
     padding: 0 32px;
+
+    .app-header {
+      padding: 0 24px;
+    }
 
     .app-footer {
       width: calc(100% + 32px * 2);
@@ -192,6 +220,10 @@ button {
 @media (max-width: 575.98px) {
   app-root {
     padding: 0 16px;
+
+    .app-header {
+      padding: 0 8px;
+    }
 
     .app-footer {
       width: calc(100% + 16px * 2);
