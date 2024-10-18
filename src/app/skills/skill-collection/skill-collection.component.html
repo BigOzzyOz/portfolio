@@ -1,0 +1,29 @@
+<div class="skill-container">
+  @for(skill of skillsKnown; track $index) {
+    <div class="skill">
+      <img src="{{skill.img}}" alt="{{skill.name}}">
+      <p>{{skill.name}}</p>
+    </div>
+  }
+  <div class="continue" (mouseover)="source = 'assets/icons/skills/continually-learning.png'"
+    (mouseout)="source = 'assets/icons/skills/continually-learning-orange.png'">
+    <img [src]="source" alt="learning">
+    <p>Continue Learning</p>
+    <div class="continue-window">
+      <p>Coming soon</p>
+      @for(skill of futureSkills; track $index) {
+        <div class="skill-small">
+          <img src="{{skill.img}}" alt="{{skill.name}}">
+          <p>{{skill.name}}</p>
+        </div>
+      }
+      <p>Special Interessts in</p>
+      @for(skill of skillsToLearn; track $index) {
+        <div class="skill-small">
+          <img src="{{skill.img}}" alt="{{skill.name}}">
+          <p>{{skill.name}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

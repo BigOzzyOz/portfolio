@@ -1,4 +1,4 @@
-@import 'variabels';
+@import 'variables';
 
 .landing-page {
   width: 100%;
@@ -135,7 +135,7 @@
     gap: 32px;
     width: 560px;
 
-    .oline {
+    .o-line {
       width: 96px;
       height: 4px;
       position: absolute;
@@ -230,7 +230,7 @@
     .left-bottom {
       width: 600px;
 
-      .oline {
+      .o-line {
 
         left: -56px;
       }
@@ -307,7 +307,7 @@
     .left-bottom {
       width: 624px;
 
-      .oline {
+      .o-line {
         left: -32px;
       }
     }
@@ -419,7 +419,7 @@
     .left-bottom {
       justify-content: flex-end;
 
-      .oline {
+      .o-line {
         left: -16px;
       }
     }

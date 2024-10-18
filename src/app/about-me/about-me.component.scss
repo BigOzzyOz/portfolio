@@ -1,4 +1,4 @@
-@import 'variabels';
+@import 'variables';
 
 .about-me {
   display: flex;
@@ -80,7 +80,7 @@
     z-index: 1;
   }
 
-  .oline {
+  .o-line {
     width: 40%;
     height: 4px;
     position: absolute;
@@ -110,7 +110,7 @@
       height: 300px;
     }
 
-    .oline {
+    .o-line {
       right: -56px;
     }
   }
@@ -136,7 +136,7 @@
   .about-me-text {
 
     h2 {
-      font-size: 32px;
+      font-size: 48px;
     }
   }
 }

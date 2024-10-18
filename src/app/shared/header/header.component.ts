@@ -15,11 +15,11 @@ export class HeaderComponent {
   burgerMenu: boolean = false;
 
   headerLinks = [
-    'About me',
-    'Skills',
-    'Portfolio',
-    'References',
-    'Contact'
+    { name: 'About me', id: 'about-me' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Portfolio', id: 'portfolio' },
+    { name: 'References', id: 'references' },
+    { name: 'Contact', id: 'contact' }
   ]
 
   constructor() { }

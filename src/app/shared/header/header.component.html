@@ -7,7 +7,7 @@
       (click)="toggleBurger($event)" [src]="burger" alt="">
     <ul [class.active]="burgerMenu">
       @for (link of headerLinks; track $index) {
-        <li><a class="a-text" href="#{{link}}">{{link}}</a></li>
+        <li><a class="a-text" href="#{{link.id}}">{{link.name}}</a></li>
       }
     </ul>
   </nav>

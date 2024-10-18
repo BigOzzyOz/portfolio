@@ -1,0 +1,123 @@
+@import 'variables';
+
+.skill-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 24px;
+
+  .skill {
+    cursor: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    gap: 8px;
+    padding-bottom: 24px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    &:hover,
+    &:focus {
+
+      img {
+        transform: translate(0, -16px);
+        animation: slide-down 750ms ease-in-out forwards;
+      }
+    }
+
+    @keyframes slide-down {
+      0% {
+        transform: translate(0, -16px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .continue {
+    @extend .skill;
+    cursor: pointer;
+
+    p {
+      color: $secondary-color;
+    }
+
+    .continue-window {
+      transition: all 125ms ease-in-out;
+      transform-origin: center;
+      transform: scale(0);
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: $background-color;
+      border: 4px solid $secondary-color;
+      border-radius: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 4px;
+
+      p {
+        width: 100%;
+        text-align: center;
+      }
+
+      .skill-small {
+        @extend .skill;
+        gap: 4px;
+        width: 64px;
+        padding-bottom: 0;
+
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+
+
+    &:hover,
+    &:focus {
+
+      img {
+        transform: unset;
+        animation: unset;
+      }
+
+      p {
+        color: #fff;
+      }
+
+      .continue-window {
+        transform: scale(1);
+      }
+    }
+  }
+}
