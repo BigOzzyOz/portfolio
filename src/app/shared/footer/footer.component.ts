@@ -6,7 +6,7 @@ import { SocialLinksComponent } from "../social-links/social-links.component";
   standalone: true,
   imports: [SocialLinksComponent],
   templateUrl: './footer.component.html',
-  styleUrls: ['./../../../styles.scss', './footer.component.scss',]
+  styleUrls: ['./../../../style/styles.scss', './footer.component.scss',]
 })
 export class FooterComponent {
 

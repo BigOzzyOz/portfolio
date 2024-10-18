@@ -1,3 +1,9 @@
+@mixin back-arrow() {
+  position: absolute;
+  cursor: pointer;
+  right: 24px;
+}
+
 .privacy {
   margin: 120px 0 32px 0;
   position: relative;
@@ -20,27 +26,25 @@
 }
 
 .back-arrow-top {
-  position: absolute;
+  @include back-arrow();
   top: 24px;
-  right: 24px;
-  cursor: pointer;
 
   img {
-    width: 32px;
-    height: 32px;
-    transform: rotate(270deg);
+    @extend .back-arrow-img;
   }
 }
 
 .back-arrow-bottom {
-  position: absolute;
+  @include back-arrow();
   bottom: -8px;
-  right: 24px;
-  cursor: pointer;
 
   img {
-    width: 32px;
-    height: 32px;
-    transform: rotate(270deg);
+    @extend .back-arrow-img;
   }
+}
+
+.back-arrow-img {
+  width: 32px;
+  height: 32px;
+  transform: rotate(270deg);
 }

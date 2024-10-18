@@ -1,3 +1,9 @@
+@mixin back-arrow() {
+  right: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
 .imprint {
   margin: 120px 0 32px 0;
   position: relative;
@@ -15,28 +21,26 @@ li {
   padding-left: 2em;
 }
 
+.back-arrow-img {
+  width: 32px;
+  height: 32px;
+  transform: rotate(270deg);
+}
+
 .back-arrow-top {
-  position: absolute;
+  @include back-arrow();
   top: 24px;
-  right: 24px;
-  cursor: pointer;
 
   img {
-    width: 32px;
-    height: 32px;
-    transform: rotate(270deg);
+    @extend .back-arrow-img;
   }
 }
 
 .back-arrow-bottom {
-  position: absolute;
+  @include back-arrow();
   bottom: -8px;
-  right: 24px;
-  cursor: pointer;
 
   img {
-    width: 32px;
-    height: 32px;
-    transform: rotate(270deg);
+    @extend .back-arrow-img;
   }
 }

@@ -1,6 +1,4 @@
-$primary-color: #ff4747;
-$secondary-color: #Fa7902;
-$background-color: #141D2F;
+@import 'variabels';
 
 footer {
   width: 100%;
@@ -15,32 +13,20 @@ footer {
       #27334B 14%,
       #141D2F 72%);
 
-
   .top-footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-
     img {
       position: relative;
       width: 120px;
       height: auto;
     }
-
   }
-
 }
 
-/*ANCHOR Media Query
-/*XX-Large devices (larger desktops, 1400px and up)*/
-/*No media query since the xxl breakpoint has no upper bound on its width*/
-
-/*X-Large devices (large desktops, less than 1400px)*/
-@media (max-width: 1399.98px) {}
-
-/*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
 
   footer {
@@ -48,7 +34,6 @@ footer {
   }
 }
 
-/*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
 
   footer {
@@ -63,8 +48,6 @@ footer {
     justify-content: space-between;
     padding: 16px 0;
 
-
-
     .top-footer {
       flex-direction: column;
       height: 80%;
@@ -73,7 +56,6 @@ footer {
         width: 96px;
       }
     }
-
   }
 }
 

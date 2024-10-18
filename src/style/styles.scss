@@ -1,0 +1,227 @@
+@import 'variabels';
+@import 'fonts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  scroll-behavior: smooth;
+  word-break: break-word;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $background-color;
+    border-radius: 8px;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-width: auto;
+    scrollbar-color: $primary-color $background-color;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: $background-color;
+  overflow: hidden auto;
+}
+
+app-root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+  padding: 0 96px;
+
+  .app-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    max-width: 1920px;
+    z-index: 10;
+    background-color: $background-color;
+    padding: 0 96px;
+  }
+
+  router-outlet {
+    flex: 1;
+  }
+
+  .app-footer {
+    border-top: 4px solid$primary-color;
+    flex-shrink: 0;
+    width: calc(100% + 96px * 2);
+    margin-left: -96px;
+  }
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  font-size: 16px;
+  transition: all 125ms ease;
+  height: 56px;
+  width: 104px;
+  border-radius: 8px;
+  border: 1px solid $primary-color;
+
+  &.primary {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      transform: scale(1.2);
+      transform-origin: top center;
+    }
+
+    &:active {
+      background-color: #fff;
+      color: $background-color;
+      border: 1px solid #fff;
+    }
+  }
+
+  &.secondary {
+    background-color: $background-color;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+
+    &:active {
+      background-color: #fff;
+      color: $secondary-color;
+      border: 1px solid #fff;
+    }
+  }
+}
+
+.a-text {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 56px;
+    height: 2px;
+    background-color: $secondary-color;
+    transform: scaleX(0);
+    transition: transform 125ms ease-in-out;
+    transform-origin: left;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1199.98px) {
+  app-root {
+    padding: 0 56px;
+
+    .app-header {
+      padding: 0 56px;
+    }
+
+    .app-footer {
+      width: calc(100% + 56px * 2);
+      margin-left: -56px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  app-root {
+    padding: 0 32px;
+
+    .app-header {
+      padding: 0 32px;
+    }
+
+    .app-footer {
+      width: calc(100% + 32px * 2);
+      margin-left: -32px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  app-root {
+    padding: 0 16px;
+
+    .app-header {
+      padding: 0 16px;
+    }
+
+    .app-footer {
+      width: calc(100% + 16px * 2);
+      margin-left: -16px;
+    }
+  }
+}
