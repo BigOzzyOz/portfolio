@@ -1,0 +1,79 @@
+@import 'variables';
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 120px 0 32px 0;
+  gap: 32px;
+}
+
+.top-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+
+  h2 {
+    position: relative;
+    font-size: 80px;
+    line-height: 1;
+
+    .o-line {
+      position: absolute;
+      top: 40px;
+      height: 4px;
+      background-color: $secondary-color;
+      transform: rotate(180deg);
+      z-index: -1;
+    }
+
+    .left {
+      left: -2dvw;
+      width: 7dvw;
+      transform-origin: left center;
+    }
+
+    .right {
+      right: -2dvw;
+      width: 50dvw;
+      transform-origin: right center;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .top-portfolio {
+
+
+    h2 {
+      font-size: 64px;
+
+      .o-line {
+        top: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .top-portfolio {
+    h2 {
+      font-size: 48px;
+
+      .o-line {
+        top: 24px;
+      }
+    }
+  }
+}

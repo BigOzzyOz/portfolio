@@ -48,6 +48,19 @@
   }
 }
 
+.skills-shadow-container {
+  position: absolute;
+  top: 55%;
+  left: -550px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  background-image: url("./../../../assets/img/shadow_skills-portfolio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .bottom-skill {
   grid-area: bottom-skill;
   @include skillContainer();

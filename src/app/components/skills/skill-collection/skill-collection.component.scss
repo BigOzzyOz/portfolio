@@ -51,7 +51,7 @@
 
   .continue {
     @extend .skill;
-    cursor: pointer;
+    cursor: default;
 
     p {
       color: $secondary-color;
@@ -71,6 +71,10 @@
       height: 100%;
       z-index: 1;
       background-color: $background-color;
+      background-image: radial-gradient(ellipse farthest-corner at 50% -5%,
+          #1A2743 0%,
+          #27334B 14%,
+          #141D2F 72%);
       border: 4px solid $secondary-color;
       border-radius: 8px;
       flex-wrap: wrap;
