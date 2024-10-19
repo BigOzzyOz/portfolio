@@ -1,1 +1,12 @@
-<p>project works!</p>
+<div class="project" [class.reverse]="index % 2 === 1">
+  <img src="{{project.img}}" alt="{{project.name}}">
+  <div class="text">
+    <h3>{{project.name}}</h3>
+    <p class="tech">{{project.technologies.join(' | ')}}</p>
+    <p class="description">{{project.description}}</p>
+    <div class="buttons">
+      <button class="primary" (click)="projectService.openLink(project.link)">Live test</button>
+      <button class="secondary" (click)="projectService.openLink(project.gitLink)">GitHub</button>
+    </div>
+  </div>
+</div>

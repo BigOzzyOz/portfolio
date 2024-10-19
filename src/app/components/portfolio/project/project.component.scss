@@ -1,0 +1,75 @@
+@import 'variables';
+
+.project {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 64px;
+  padding-bottom: 32px;
+
+  &.reverse {
+    flex-direction: row-reverse;
+
+    .text {
+      align-items: flex-end;
+      text-align: right;
+
+      .buttons {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+img {
+  width: auto;
+  height: 400px;
+}
+
+.text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+
+  h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: $secondary-color;
+  }
+
+  .tech {
+    font-size: 24px;
+    color: $primary-color;
+    font-weight: 400;
+  }
+
+  .description {
+    font-weight: 400;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 72px;
+
+    button {
+      width: 152px;
+      height: 56px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .primary {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+
+      &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        transform: scale(1);
+      }
+    }
+  }
+}
