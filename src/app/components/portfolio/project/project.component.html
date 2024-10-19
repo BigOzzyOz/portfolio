@@ -1,12 +1,12 @@
-<div class="project" [class.reverse]="index % 2 === 1">
+<div class="project" [class.disabled]="disabled" [class.reverse]="index % 2 === 1">
   <img src="{{project.img}}" alt="{{project.name}}">
   <div class="text">
     <h3>{{project.name}}</h3>
     <p class="tech">{{project.technologies.join(' | ')}}</p>
     <p class="description">{{project.description}}</p>
     <div class="buttons">
-      <button class="primary" (click)="projectService.openLink(project.link)">Live test</button>
-      <button class="secondary" (click)="projectService.openLink(project.gitLink)">GitHub</button>
+      <button class="primary" [disabled]="disabled" (click)="projectService.openLink(project.link)">Live test</button>
+      <button class="secondary" [disabled]="disabled" (click)="projectService.openLink(project.gitLink)">GitHub</button>
     </div>
   </div>
 </div>

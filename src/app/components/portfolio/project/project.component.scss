@@ -4,8 +4,12 @@
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  gap: 64px;
+  gap: 32px;
   padding-bottom: 32px;
+
+  &.disabled {
+    filter: grayscale(75%);
+  }
 
   &.reverse {
     flex-direction: row-reverse;
@@ -22,8 +26,9 @@
 }
 
 img {
-  width: auto;
-  height: 400px;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
 }
 
 .text {
@@ -73,3 +78,61 @@ img {
     }
   }
 }
+
+/*ANCHOR Media Query
+/*XX-Large devices (larger desktops, 1400px and up)*/
+/*No media query since the xxl breakpoint has no upper bound on its width*/
+
+/*X-Large devices (large desktops, less than 1400px)*/
+@media (max-width: 1399.98px) {}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+
+  .text {
+    .buttons {
+      gap: 40px;
+
+      button {
+        width: 120px;
+        height: 48px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+
+    &.reverse {
+      flex-direction: column;
+
+      .text {
+        align-items: center;
+        text-align: center;
+
+        .buttons {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
+  .text {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+/*X-Small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {}

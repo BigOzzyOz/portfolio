@@ -6,12 +6,33 @@
     </h2>
     <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
   </div>
-  <h3>Done projects</h3>
+  <h3>Done projects
+    <div class="o-line-small-left"></div>
+    <div class="o-line-small-right"></div>
+  </h3>
   @for(project of projectService.doneProjects; track $index) {
-    <app-project [project]="project" [index]="$index"></app-project>
+    <app-project [project]="project" [index]="$index" [disabled]="false"></app-project>
   }
-  <h3>Future projects</h3>
-  @for(project of projectService.futureProjects; track $index) {
-    <app-project [project]="project"></app-project>
+  @if(projectService.currentProjects.length > 0) {
+    <h3>Current projects
+      <div class="o-line-small-left"></div>
+      <div class="o-line-small-right"></div>
+    </h3>
+    @for(project of projectService.currentProjects; track $index) {
+      <app-project [project]="project" [index]="$index + projectService.doneProjects.length"
+        [disabled]="true"></app-project>
+    }
   }
+  @if(projectService.futureProjects.length > 0) {
+    <h3>Future projects
+      <div class="o-line-small-left"></div>
+      <div class="o-line-small-right"></div>
+    </h3>
+    @for(project of projectService.futureProjects; track $index) {
+      <app-project [project]="project"
+        [index]="$index + projectService.doneProjects.length + projectService.currentProjects.length"
+        [disabled]="true"></app-project>
+    }
+  }
+  <div class="portfolio-shadow-container"></div>
 </section>

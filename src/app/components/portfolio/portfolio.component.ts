@@ -22,6 +22,7 @@ export class PortfolioComponent {
   };
 
   @Input() index: number = 0;
+  @Input() disabled: boolean = false;
 
   constructor(public projectService: ProjectService) { }
 }

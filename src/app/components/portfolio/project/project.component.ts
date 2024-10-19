@@ -20,8 +20,8 @@ export class ProjectComponent {
     gitLink: '',
     img: ''
   }
-
   @Input() index: number = 0;
+  @Input() disabled: boolean = false;
 
   constructor(public projectService: ProjectService) { }
 

@@ -19,7 +19,13 @@ footer {
     justify-content: space-between;
     align-items: center;
 
+    span {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
     img {
+      padding-top: 16px;
       position: relative;
       width: 120px;
       height: auto;
