@@ -1,1 +1,72 @@
-<p>references works!</p>
+<section class="references">
+
+  <div class="ref-container">
+    <div class="decoration"></div>
+    <div class="ref-text-container">
+
+
+
+      <div class="ref-info-container text-before" [class.animate-left-side]="animateRight">
+        <div class="ref-text">
+          {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].ref}}
+        </div>
+        <div class="ref-name-container">
+          <div class="o-line-name"></div>
+          <div class="ref-name">
+            {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].name}}
+          </div>
+        </div>
+      </div>
+
+      <div class="ref-info-container" [class.animate-center-left]="animateLeft"
+        [class.animate-center-right]="animateRight" [class.fade-out]="animateClick">
+        <div class="ref-text">{{currentRef.ref}}</div>
+        <div class="ref-name-container">
+          <div class="o-line-name"></div>
+          <div class="ref-name">{{currentRef.name}}</div>
+        </div>
+      </div>
+
+      <div class="ref-info-container text-click" [class.animate]="animateClick">
+        <div class="ref-text">{{nextRef.ref}}</div>
+        <div class="ref-name-container">
+          <div class="o-line-name"></div>
+          <div class="ref-name">{{nextRef.name}}</div>
+        </div>
+      </div>
+
+      <div class="ref-info-container text-after" [class.animate-right-side]="animateLeft">
+        <div class="ref-text">
+          {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].ref}}
+        </div>
+        <div class="ref-name-container">
+          <div class="o-line-name"></div>
+          <div class="ref-name">
+            {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].name}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div [style]="'background-image: url(' + currentRef.img + ')'" class="ref-img">
+      <img class="img-after" [src]="nextImgSource" [class.animate]="animate" alt="">
+      <div class="o-line-image"></div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="arrow-reverse">
+      <img src="assets/icons/arrow-ref.png" alt="arrow"
+        (click)="next(currentRefIndex - 1 === -1 ? ref.references.length - 1 : currentRefIndex - 1)">
+    </div>
+    @for(ref of ref.references; track $index) {
+      <div class="dot" (click)="click($index)">
+        <img [src]="ref.name === currentRef.name ? 'assets/icons/dot-active.png' : 'assets/icons/dot.png'" alt="dot">
+      </div>
+    }
+    <div class="arrow">
+      <img src="assets/icons/arrow-ref.png" alt="arrow"
+        (click)="previous(currentRefIndex + 1 === ref.references.length ? 0 : currentRefIndex + 1)">
+    </div>
+  </div>
+</section>

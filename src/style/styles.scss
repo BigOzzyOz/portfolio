@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
+  line-height: 1;
   color: #fff;
   scroll-behavior: smooth;
   word-break: break-word;
@@ -53,6 +54,11 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: 600;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 body {

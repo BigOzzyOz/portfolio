@@ -96,6 +96,7 @@
         color: $secondary-color;
         line-height: 1;
         font-weight: 400;
+        font-size: 56px;
       }
     }
   }
@@ -207,16 +208,23 @@
 
   .hero-text-container {
 
-    p:first-child {
-      font-size: 48px;
-    }
+    .hero-text {
 
-    div {
-      font-size: 48px;
+      p:first-child {
+        font-size: 48px;
+      }
 
-      h1 {
-        font-size: 72px;
-        letter-spacing: normal;
+      div {
+        font-size: 48px;
+
+        h1 {
+          font-size: 72px;
+          letter-spacing: normal;
+        }
+
+        p {
+          font-size: 48px;
+        }
       }
     }
   }
@@ -279,7 +287,7 @@
       justify-content: center;
 
       p:first-child {
-        left: 0;
+        left: 16px;
         font-size: 40px;
       }
 
@@ -288,6 +296,10 @@
 
         h1 {
           font-size: 56px;
+        }
+
+        p {
+          font-size: 40px;
         }
       }
     }
@@ -333,7 +345,7 @@
     .hero-text {
 
       p:first-child {
-        left: 0;
+        left: 12px;
         font-size: 32px;
       }
 
@@ -342,6 +354,10 @@
 
         h1 {
           font-size: 48px;
+        }
+
+        p {
+          font-size: 32px;
         }
       }
     }
@@ -401,7 +417,8 @@
     .hero-text {
 
       p:first-child {
-        font-size: 20px;
+        left: 8px;
+        font-size: 22px;
       }
 
       div {
@@ -409,6 +426,10 @@
 
         h1 {
           font-size: 32px;
+        }
+
+        p {
+          font-size: 22px;
         }
       }
     }

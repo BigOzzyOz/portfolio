@@ -52,7 +52,7 @@ footer {
   footer {
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 16px;
 
     .top-footer {
       flex-direction: column;
@@ -62,11 +62,5 @@ footer {
         width: 96px;
       }
     }
-  }
-}
-
-@media (max-width: 575.98px) {
-  footer {
-    padding: 0 16px;
   }
 }
