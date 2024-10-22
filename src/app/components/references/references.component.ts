@@ -35,9 +35,9 @@ export class ReferencesComponent {
   }
 
   getReferences(index: number) {
-    this.resetBoolean();
     this.currentRef = this.ref.references[index];
     this.currentRefIndex = index;
+    this.resetBoolean();
     this.timeOut = setTimeout(() => {
       this.previous(this.currentRefIndex + 1 === this.ref.references.length ? 0 : this.currentRefIndex + 1)
     }, 15000);
@@ -46,20 +46,20 @@ export class ReferencesComponent {
   next(index: number) {
     this.prepareChange(index);
     this.animateRight = true;
-    setTimeout(() => this.getReferences(index), 1500);
+    setTimeout(() => this.getReferences(index), 1450);
   }
 
   previous(index: number) {
     this.prepareChange(index);
     this.animateLeft = true;
-    setTimeout(() => this.getReferences(index), 1500);
+    setTimeout(() => this.getReferences(index), 1450);
   }
 
   click(index: number) {
     this.prepareChange(index);
     this.nextRef = this.ref.references[index];
     this.animateClick = true;
-    setTimeout(() => this.getReferences(index), 1500);
+    setTimeout(() => this.getReferences(index), 1450);
   }
 
   prepareChange(index: number) {

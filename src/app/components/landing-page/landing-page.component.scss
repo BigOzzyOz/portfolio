@@ -153,8 +153,8 @@
   .right-bottom {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     gap: 16px;
     height: 100%;
 
@@ -169,6 +169,7 @@
     img {
       width: 36px;
       height: 36px;
+      animation: scroll-down 1s ease-in-out infinite;
     }
   }
 }
@@ -180,13 +181,26 @@
   width: 800px;
   height: 800px;
   z-index: -1;
-  background-image: url("./../../../assets/img/shadow_about_me.png");
+  background-image: url("./../../../assets/img/shadow-about-me.png");
   background-size: fill;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/*Large devices (desktops, less than 1200px)*/
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(16px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1199.98px) {
 
   .hero {

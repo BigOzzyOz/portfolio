@@ -1,0 +1,99 @@
+@import 'variables';
+
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 120px 0 120px 0;
+  gap: 56px;
+}
+
+.top-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    position: relative;
+    font-size: 80px;
+
+    .o-line {
+      width: 50dvw;
+      height: 4px;
+      background-color: $secondary-color;
+      position: absolute;
+      top: 50%;
+      left: -32px;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.bottom-contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 64px;
+
+  .left-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .right-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.contact-shadow-container {
+  position: absolute;
+  bottom: -400px;
+  left: -400px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  background-image: url("./../../../assets/img/shadow-footer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 991.98px) {
+
+  .top-contact {
+    h2 {
+      font-size: 64px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .top-contact {
+    h2 {
+      font-size: 48px;
+    }
+  }
+
+  .bottom-contact {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

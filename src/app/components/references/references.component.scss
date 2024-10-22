@@ -11,6 +11,20 @@
   gap: 32px;
 }
 
+.skills-shadow-container {
+  position: absolute;
+  top: -380px;
+  right: -550px;
+  width: 800px;
+  height: 800px;
+  z-index: -1;
+  background-image: url("./../../../assets/img/shadow-skills-portfolio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scale(1, -1) rotate(-80deg);
+}
+
 .decoration {
   height: 64px;
   width: 96px;
@@ -268,7 +282,6 @@
   .ref-container {
 
     .ref-text-container {
-      height: 280px;
 
       .ref-info-container {
 
