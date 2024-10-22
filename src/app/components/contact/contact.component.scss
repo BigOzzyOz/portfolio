@@ -1,6 +1,6 @@
 @import 'variables';
 
-.contact {
+.contact-field {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   padding: 120px 0 120px 0;
-  gap: 56px;
+  gap: 64px;
 }
 
 .top-contact {
