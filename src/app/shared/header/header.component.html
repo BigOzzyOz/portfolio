@@ -1,5 +1,5 @@
 <header>
-  <a class="logo" href="/">
+  <a class="logo" href="#">
     <img class="logo" src="assets/img/logo_jhro.png" alt="logo">
   </a>
   <nav>
@@ -7,7 +7,7 @@
       (click)="toggleBurger($event)" [src]="burger" alt="">
     <ul [class.active]="burgerMenu">
       @for (link of headerLinks; track $index) {
-        <li><a class="a-text" href="#{{link.id}}">{{link.name}}</a></li>
+        <li><a class="a-text" (click)="main.scrollTo(link.id)">{{link.name}}</a></li>
       }
     </ul>
   </nav>

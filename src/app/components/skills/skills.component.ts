@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillCollectionComponent } from "./skill-collection/skill-collection.component";
+import { MainContentComponent } from '../main-content/main-content.component';
 
 @Component({
   selector: 'app-skills',
@@ -9,5 +10,6 @@ import { SkillCollectionComponent } from "./skill-collection/skill-collection.co
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+  main = inject(MainContentComponent)
 
 }

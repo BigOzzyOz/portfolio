@@ -1,21 +1,25 @@
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MainContentComponent } from '../../components/main-content/main-content.component';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
 
+  main = inject(MainContentComponent);
+
   burger: string = 'assets/icons/burger.png';
   burgerMenu: boolean = false;
 
   headerLinks = [
-    { name: 'About me', id: 'about-me' },
+    { name: 'About me', id: 'aboutMe' },
     { name: 'Skills', id: 'skills' },
     { name: 'Portfolio', id: 'portfolio' },
     { name: 'References', id: 'references' },

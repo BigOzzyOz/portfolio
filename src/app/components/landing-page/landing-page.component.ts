@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 import { CommonModule } from '@angular/common';
 import { SocialLinksComponent } from "../../shared/social-links/social-links.component";
+import { MainContentComponent } from '../main-content/main-content.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -11,6 +12,7 @@ import { SocialLinksComponent } from "../../shared/social-links/social-links.com
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
+  main = inject(MainContentComponent);
 
   constructor(public lS: LanguageService) { }
 

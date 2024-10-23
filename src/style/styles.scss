@@ -10,6 +10,7 @@
   line-height: 1;
   color: #fff;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   word-break: break-word;
 
   &::-webkit-scrollbar {
@@ -76,7 +77,6 @@ app-root {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: auto;
   width: 100%;
   max-width: 1920px;
   overflow: hidden;

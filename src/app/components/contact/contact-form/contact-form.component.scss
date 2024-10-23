@@ -102,6 +102,16 @@ textarea {
     outline: none;
     border: 2px solid $primary-color;
   }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active,
+  &::-webkit-spelling-error {
+    appearance: none !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #fff !important;
+  }
 }
 
 input :not([type="checkbox"]) {

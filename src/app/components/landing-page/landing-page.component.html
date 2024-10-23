@@ -16,12 +16,12 @@
       <div [ngStyle]="{'display': 'flex', width: '100%'}">
         <div class="filler"></div>
         <div class="filler-2">
-          <button class="primary">Let's talk!</button>
+          <button class="primary" (click)="main.scrollTo('contact')">Let's talk!</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="bottom-landing">
+  <div class=" bottom-landing">
     <div class="left-bottom">
       <div class="o-line"></div>
       <app-social-links></app-social-links>

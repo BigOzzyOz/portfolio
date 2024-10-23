@@ -1,21 +1,22 @@
 <form [formGroup]="contactMessage" (ngSubmit)="sendForm()">
   <div class="name-field">
     <label for="name"></label>
-    <input placeholder="Your name" type="text" id="name" name="name" formControlName="name" autocomplete="true">
+    <input placeholder="Your name" id="name" type="text" name="name" formControlName="name" autocomplete="name">
     <div class="error-field">
       <span [class.error-message]="errorName">please enter your name</span>
     </div>
   </div>
   <div class="email-field">
     <label for="email"></label>
-    <input placeholder="Your email" type="email" id="email" name="email" formControlName="email" autocomplete="true">
+    <input placeholder="Your email" id="email" type="email" name="email" formControlName="email" autocomplete="email">
     <div class="error-field">
       <span [class.error-message]="errorEmail">please enter a valid email</span>
     </div>
   </div>
   <div class="message-field">
     <label for="message"></label>
-    <textarea placeholder="Your message" id="message" name="message" formControlName="message"></textarea>
+    <textarea placeholder="Your message" id="message" name="message" name="message"
+      formControlName="message"></textarea>
     <div class="error-field">
       <span [class.error-message]="errorText">please enter a message</span>
     </div>
