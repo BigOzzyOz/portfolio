@@ -2,6 +2,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainContentComponent } from '../../components/main-content/main-content.component';
+import { LanguageService } from '../../services/language.service';
 
 
 @Component({
@@ -15,18 +16,17 @@ export class HeaderComponent {
 
   main = inject(MainContentComponent);
 
+  srcLanguage: string = 'assets/icons/globe.png';
+  languageBurger: boolean = false;
   burger: string = 'assets/icons/burger.png';
   burgerMenu: boolean = false;
 
-  headerLinks = [
-    { name: 'About me', id: 'aboutMe' },
-    { name: 'Skills', id: 'skills' },
-    { name: 'Portfolio', id: 'portfolio' },
-    { name: 'References', id: 'references' },
-    { name: 'Contact', id: 'contact' }
-  ]
+  headerLinks = ['aboutMe', 'skills', 'portfolio', 'references', 'contact'];
 
-  constructor() { }
+
+  constructor(public ls: LanguageService) {
+    console.log(ls.header[ls.language]);
+  }
 
   toggleBurger(e: Event) {
     if (e.type === 'mouseout') this.burger = this.burgerMenu ? 'assets/icons/close-final.png' : 'assets/icons/burger.png';

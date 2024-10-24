@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ProjectService } from '../../../services/project.service';
 import { Project } from '../../../interfaces/project';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-project',
@@ -12,17 +13,21 @@ import { Project } from '../../../interfaces/project';
 
 export class ProjectComponent {
 
+  ls = inject(LanguageService);
+  projectService = inject(ProjectService);
   @Input() project: Project = {
     name: '',
     technologies: [],
-    description: '',
+    description: {},
     link: '',
     gitLink: '',
     img: ''
-  }
+  };
   @Input() index: number = 0;
   @Input() disabled: boolean = false;
+  @Input() language: string = '';
 
-  constructor(public projectService: ProjectService) { }
+
+  constructor() { }
 
 }

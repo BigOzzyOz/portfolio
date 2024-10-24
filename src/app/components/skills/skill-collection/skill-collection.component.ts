@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../services/language.service';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Component } from '@angular/core';
   styleUrl: './skill-collection.component.scss'
 })
 export class SkillCollectionComponent {
+  ls = inject(LanguageService);
 
   source: string = 'assets/icons/skills/continually-learning-orange.png'
 

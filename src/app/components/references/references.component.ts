@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ReferencesService } from '../../services/references.service';
 import { References } from '../../interfaces/references';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-references',
@@ -10,17 +11,21 @@ import { References } from '../../interfaces/references';
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+  ls = inject(LanguageService);
+  ref = inject(ReferencesService);
 
   currentRef: References = {
-    name: '',
-    ref: '',
+    name: {},
+    ref: {},
     img: ''
   };
+
   nextRef: References = {
-    name: '',
-    ref: '',
+    name: {},
+    ref: {},
     img: ''
   };
+
   currentRefIndex: number = 0;
   source: string = '';
   nextImgSource: string = '';
@@ -30,7 +35,7 @@ export class ReferencesComponent {
   animateRight: boolean = false;
   timeOut: any;
 
-  constructor(public ref: ReferencesService) {
+  constructor() {
     this.getReferences(this.currentRefIndex);
   }
 

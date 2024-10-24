@@ -3,7 +3,7 @@
   <div class="text">
     <h3>{{project.name}}</h3>
     <p class="tech">{{project.technologies.join(' | ')}}</p>
-    <p class="description">{{project.description}}</p>
+    <p class="description">{{project.description[language]}}</p>
     <div class="buttons">
       <button class="primary" [disabled]="disabled" (click)="projectService.openLink(project.link)">Live test</button>
       <button class="secondary" [disabled]="disabled" (click)="projectService.openLink(project.gitLink)">GitHub</button>

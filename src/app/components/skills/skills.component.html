@@ -1,14 +1,16 @@
 <section class="skills">
   <div class="top-skill">
-    <h2>My skills</h2>
-    <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
-    <div class="o-line"></div>
+
+    <h2>{{ls.skills[ls.language]['skills']}}
+      <div class="o-line"></div>
+    </h2>
+    <p>{{ls.skills[ls.language]['experience']}}</p>
   </div>
   <app-skill-collection></app-skill-collection>
   <div class="bottom-skill">
-    <h3>Looking for <span>another skill</span>?</h3>
-    <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-    <button class="primary" (click)="main.scrollTo('contact')">Get in touch</button>
+    <h3> {{ls.skills[ls.language]['search'] + ' '}}<span>{{ls.skills[ls.language]['searchHighlight']}}</span>?</h3>
+    <p>{{ls.skills[ls.language]['find']}}</p>
+    <button class="primary" (click)="main.scrollTo('contact')">{{ls.skills[ls.language]['button']}}</button>
   </div>
   <div class="skills-shadow-container"></div>
 </section>

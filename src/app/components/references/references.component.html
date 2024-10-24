@@ -1,42 +1,41 @@
 <section class="references">
-
   <div class="ref-container">
     <div class="decoration"></div>
     <div class="ref-text-container">
       <div class="ref-info-container text-before" [class.animate-left-side]="animateRight">
         <div class="ref-text">
-          {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].ref}}
+          {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].ref[ls.language]}}
         </div>
         <div class="ref-name-container">
           <div class="o-line-name"></div>
           <div class="ref-name">
-            {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].name}}
+            {{ref.references[currentRefIndex === 0 ? ref.references.length - 1 : currentRefIndex - 1 ].name[ls.language]}}
           </div>
         </div>
       </div>
       <div class="ref-info-container" [class.animate-center-left]="animateLeft"
         [class.animate-center-right]="animateRight" [class.fade-out]="animateClick">
-        <div class="ref-text">{{currentRef.ref}}</div>
+        <div class="ref-text">{{currentRef.ref[ls.language]}}</div>
         <div class="ref-name-container">
           <div class="o-line-name"></div>
-          <div class="ref-name">{{currentRef.name}}</div>
+          <div class="ref-name">{{currentRef.name[ls.language]}}</div>
         </div>
       </div>
       <div class="ref-info-container text-click" [class.animate]="animateClick">
-        <div class="ref-text">{{nextRef.ref}}</div>
+        <div class="ref-text">{{nextRef.ref[ls.language]}}</div>
         <div class="ref-name-container">
           <div class="o-line-name"></div>
-          <div class="ref-name">{{nextRef.name}}</div>
+          <div class="ref-name">{{nextRef.name[ls.language]}}</div>
         </div>
       </div>
       <div class="ref-info-container text-after" [class.animate-right-side]="animateLeft">
         <div class="ref-text">
-          {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].ref}}
+          {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].ref[ls.language]}}
         </div>
         <div class="ref-name-container">
           <div class="o-line-name"></div>
           <div class="ref-name">
-            {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].name}}
+            {{ref.references[currentRefIndex === ref.references.length - 1 ? 0 : currentRefIndex + 1 ].name[ls.language]}}
           </div>
         </div>
       </div>
@@ -62,4 +61,5 @@
     </div>
   </div>
   <div class="skills-shadow-container"></div>
+  <div class="suffix"></div>
 </section>

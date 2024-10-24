@@ -10,6 +10,6 @@ import { LanguageService } from '../../services/language.service';
 })
 export class AboutMeComponent {
 
-  constructor(public languageService: LanguageService) { }
+  constructor(public ls: LanguageService) { }
 
 }

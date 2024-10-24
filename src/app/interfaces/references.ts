@@ -1,5 +1,5 @@
 export interface References {
-  name: string;
-  ref: string;
+  name: { [key: string]: string };
+  ref: { [key: string]: string };
   img: string;
 }

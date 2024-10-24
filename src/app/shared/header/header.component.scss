@@ -1,3 +1,4 @@
+@import 'variables';
 $header-height: 120px;
 
 header {
@@ -20,11 +21,63 @@ header {
     justify-content: space-between;
     gap: 16px;
     list-style: none;
-    font-size: 24px;
+    font-size: 20px;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
   }
 
   .burger {
     display: none;
+  }
+
+  .language {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 32px;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .language-menu {
+      position: absolute;
+      top: 32px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 16px;
+      width: 200px;
+      transform-origin: top right;
+      transform: scale(0);
+      transition: transform 125ms ease-in-out;
+      background-color: $background-color;
+      border: 1px solid $primary-color;
+      border-radius: 8px;
+
+      p {
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
   }
 }
 
@@ -53,6 +106,16 @@ header {
 
       &.active {
         transform: translateX(0);
+      }
+
+      .language {
+        .language-menu {
+          bottom: unset;
+          right: 0;
+          top: -88px;
+          left: -88px;
+          transform-origin: bottom center;
+        }
       }
     }
   }

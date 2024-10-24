@@ -3,6 +3,7 @@ import { FormControl, FormGroup, FormsModule, Validators, ReactiveFormsModule } 
 import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
+  ls = inject(LanguageService);
 
   errorPrivacy: boolean = false;
   errorText: boolean = false;
@@ -39,10 +41,7 @@ export class ContactFormComponent {
     },
   };
 
-  constructor() {
-  }
-
-
+  constructor() { }
 
 
   sendForm() {

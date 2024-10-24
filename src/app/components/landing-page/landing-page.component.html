@@ -16,7 +16,8 @@
       <div [ngStyle]="{'display': 'flex', width: '100%'}">
         <div class="filler"></div>
         <div class="filler-2">
-          <button class="primary" (click)="main.scrollTo('contact')">Let's talk!</button>
+          <button class="primary"
+            (click)="main.scrollTo('contact')">{{ ls.landingPage[ls.language]['contactMe']}}</button>
         </div>
       </div>
     </div>
@@ -29,7 +30,7 @@
       </a>
     </div>
     <div class="right-bottom">
-      <p>Scroll down</p>
+      <p>{{ls.landingPage[ls.language]['scroll']}}</p>
       <img src="assets/icons/arrow-down-line.png" alt="">
     </div>
   </div>

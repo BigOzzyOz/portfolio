@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SkillCollectionComponent } from "./skill-collection/skill-collection.component";
 import { MainContentComponent } from '../main-content/main-content.component';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,6 +11,9 @@ import { MainContentComponent } from '../main-content/main-content.component';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  main = inject(MainContentComponent)
+  main = inject(MainContentComponent);
+  ls = inject(LanguageService);
+
+  constructor() { }
 
 }

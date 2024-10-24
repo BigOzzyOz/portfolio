@@ -14,6 +14,6 @@ import { MainContentComponent } from '../main-content/main-content.component';
 export class LandingPageComponent {
   main = inject(MainContentComponent);
 
-  constructor(public lS: LanguageService) { }
+  constructor(public ls: LanguageService) { }
 
 }

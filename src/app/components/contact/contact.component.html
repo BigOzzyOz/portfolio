@@ -1,16 +1,15 @@
 <section class="contact-field">
   <div class="top-contact">
-    <h2>Contact
+    <h2>{{ls.contact[ls.language]['contact']}}
       <div class="o-line"></div>
     </h2>
   </div>
   <div class="bottom-contact">
     <div class="left-contact">
-      <h3>Got a problem to solve?</h3>
-      <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
-        your
-        projects with my work.</p>
-      <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+      <h3>{{ls.contact[ls.language]['introHeadline']}}</h3>
+      <p>{{ls.contact[ls.language]['introText']}}</p>
+      <p>{{ls.contact[ls.language]['introFinal'] + ' '}}
+        <strong>{{ls.contact[ls.language]['introFinalStrong']}}</strong></p>
     </div>
     <app-contact-form class="right-contact"></app-contact-form>
   </div>

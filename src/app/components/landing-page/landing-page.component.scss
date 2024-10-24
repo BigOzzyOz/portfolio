@@ -28,7 +28,7 @@
 
   .photo-shadows {
     position: absolute;
-    left: -16px;
+    left: 0px;
     right: 0;
     width: 100%;
     height: 100%;
@@ -39,7 +39,7 @@
 
   .hero-image {
     position: absolute;
-    left: 56px;
+    left: 128px;
     right: 0;
     width: auto;
     height: 60dvh;
@@ -76,15 +76,20 @@
 
     p:first-child {
       position: relative;
-      left: 32px;
       font-size: 56px;
       font-weight: 400;
-      transform: rotate(-90deg);
+      writing-mode: vertical-lr;
+      transform: scale(-1);
+      text-align: justify;
+      display: flex;
+      justify-content: space-between;
     }
 
     div {
+      height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
       font-size: 56px;
 
       h1 {
@@ -114,8 +119,8 @@
 
     .primary {
       font-size: 24px;
-      font-weight: 400;
-      width: 160px;
+      font-weight: 500;
+      width: 240px;
       height: 64px;
     }
   }
@@ -206,12 +211,12 @@
   .hero {
 
     .photo-shadows {
-      left: -32px;
+      left: -64px;
       object-fit: cover;
     }
 
     .hero-image {
-      left: 0;
+      left: 40px;
       height: 60vh;
     }
 
@@ -264,7 +269,6 @@
   }
 }
 
-/*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
   .welcome {
     flex-direction: column;
@@ -277,13 +281,14 @@
 
     .photo-shadows {
       left: 0;
-      object-fit: cover;
+      object-fit: contain;
     }
 
     .hero-image {
       left: 0;
-      height: 50vh;
+      height: 55vh;
       margin: 0 auto;
+      top: 0;
     }
 
     .hero-background {
@@ -301,7 +306,6 @@
       justify-content: center;
 
       p:first-child {
-        left: 16px;
         font-size: 40px;
       }
 
@@ -340,7 +344,6 @@
   }
 }
 
-/*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
 
   .hero {
@@ -359,7 +362,6 @@
     .hero-text {
 
       p:first-child {
-        left: 12px;
         font-size: 32px;
       }
 
@@ -404,7 +406,6 @@
   }
 }
 
-/*X-Small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .welcome {
 
@@ -412,7 +413,7 @@
 
       .hero-image {
         height: 50dvh;
-        left: -15dvw;
+        left: -10dvw;
         top: 0
       }
 
@@ -431,7 +432,6 @@
     .hero-text {
 
       p:first-child {
-        left: 8px;
         font-size: 22px;
       }
 

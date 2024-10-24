@@ -10,17 +10,12 @@ export class ProjectService {
 
   doneProjects: Project[] = [
     {
-      name: 'Pokédex',
-      technologies: ['JavaScript', 'Api', 'HTML', 'CSS'],
-      description: 'Pokédex is a web application that allows users to search for and view information about Pokémon based on the PokéAPI.',
-      link: 'https://pokedex.jan-holtschke.de/',
-      gitLink: 'https://github.com/BigOzzyOz/pokedex',
-      img: 'assets/img/pokedex.png'
-    },
-    {
       name: 'Join',
       technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
-      description: 'Join is a Kanban board application that allows users to create and manage their kanbans.',
+      description: {
+        'de': 'Join ist ein Kanban-Board, das effizientes Aufgabenmanagement ermöglicht. Es bietet eine intuitive Benutzeroberfläche, um Aufgaben zu organisieren, Fortschritte zu verfolgen und Teams kollaborativ arbeiten zu lassen.',
+        'en': 'Join is a Kanban board designed for efficient task management. It features an intuitive interface to organize tasks, track progress, and enable collaborative teamwork.',
+      },
       link: 'https://join.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/join',
       img: 'assets/img/join.png'
@@ -28,26 +23,46 @@ export class ProjectService {
     {
       name: 'Sharkie',
       technologies: ['JavaScript', 'HTML', 'CSS'],
-      description: 'Sharkie is 2d platform game where you can play as the shark trying to defeat jellyfish, puffer fish and killer whales.',
+      description: {
+        'de': 'Sharkie ist ein 2D-Sidescroller-Spiel, in dem der Spieler Münzen und Gift sammeln muss, um den Orca zu besiegen. Dabei gilt es, Quallen und Kugelfischen auszuweichen, um das Ziel zu erreichen.',
+        'en': 'Sharkie is a 2D side-scroller game where players must collect coins and poison to defeat the Orca. Along the way, they must avoid jellyfish and pufferfish to reach their goal.',
+      },
       link: 'https://sharkie.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/sharkie_game',
       img: 'assets/img/sharkie.png'
     },
     {
-      name: 'Ring of Fire',
-      technologies: ['Angular', 'TypeScript', 'Firebase', 'SCSS'],
-      description: 'Ring of Fire is card game where you can play against friends online or on your computer.',
-      link: 'https://ring-of-fire.jan-holtschke.de/',
-      gitLink: 'https://github.com/BigOzzyOz/ring-of-fire',
-      img: 'assets/img/ring-of-fire.png'
-    }
+      name: 'Pokédex',
+      technologies: ['JavaScript', 'Api', 'HTML', 'CSS'],
+      description: {
+        'de': 'Der Pokédex ist eine Anwendung, die auf der PokéAPI basiert und es ermöglicht, Informationen über verschiedene Pokémon abzurufen. Mit einer benutzerfreundlichen Oberfläche können Nutzer Pokémon nachschlagen und deren Entwicklungen, Typen und weitere Details entdecken.',
+        'en': 'The Pokédex is an application based on the PokéAPI, allowing users to retrieve information about various Pokémon. With a user-friendly interface, users can look up Pokémon and discover their evolutions, types, and other details.',
+      },
+      link: 'https://pokedex.jan-holtschke.de/',
+      gitLink: 'https://github.com/BigOzzyOz/pokedex',
+      img: 'assets/img/pokedex.png'
+    },
+    // {
+    //   name: 'Ring of Fire',
+    //   technologies: ['Angular', 'TypeScript', 'Firebase', 'SCSS'],
+    //   description: {
+    //     en: 'Ring of Fire is card game where you can play against friends online or on your computer.',
+    //     de: 'Ring of Fire is card game where you can play against friends online or on your computer.',
+    //   },
+    //   link: 'https://ring-of-fire.jan-holtschke.de/',
+    //   gitLink: 'https://github.com/BigOzzyOz/ring-of-fire',
+    //   img: 'assets/img/ring-of-fire.png'
+    // }
   ]
 
   currentProjects: Project[] = [
     {
       name: 'DA Bubble',
       technologies: ['Angular', 'TypeScript', 'Firebase'],
-      description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+      description: {
+        de: 'DA Bubble ist ein Slack-Klon, der eine Plattform für die Kommunikation und Zusammenarbeit in Teams bietet. Mit Funktionen wie Nachrichten, Kanälen und Dateifreigabe ermöglicht DA Bubble eine effiziente und benutzerfreundliche Interaktion zwischen den Teammitgliedern.',
+        en: 'DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.',
+      },
       link: '',
       gitLink: '',
       img: 'assets/img/da-bubble.png'
