@@ -44,10 +44,10 @@ export class LanguageService {
     },
     "en": {
       'aboutMe': 'About me',
-      'intro': 'Hi, I’m a Frontend Developer from the Mannheim and Heidelberg area. I am passionate about creating visually captivating and user-friendly websites and applications. Inspired by the endless possibilities in IT, I continuously strive to expand my knowledge, including Fullstack and Backend development, to enhance my skill set.',
+      'intro': 'Hi, I\'m a Frontend Developer from the Mannheim and Heidelberg area. I am passionate about creating visually captivating and user-friendly websites and applications. Inspired by the endless possibilities in IT, I continuously strive to expand my knowledge, including Fullstack and Backend development, to enhance my skill set.',
       'location': 'Flexible in my approach, I can be effectively deployed both on-site in the Mannheim or Heidelberg area and remotely.',
-      'development': '"I maintain an open-minded attitude and am always looking for new challenges that help me expand my knowledge and further develop my skills.',
-      'innovation': 'In my work, programming is more than just writing code; it’s a creative way to solve problems. I take pride in breaking down complex technical issues into simple, user-friendly         solutions that help you achieve your goals and bring your ideas to life.',
+      'development': 'I maintain an open-minded attitude and am always looking for new challenges that help me expand my knowledge and further develop my skills.',
+      'innovation': 'In my work, programming is more than just writing code; it\'s a creative way to solve problems. I take pride in breaking down complex technical issues into simple, user-friendly       solutions that help you achieve your goals and bring your ideas to life.',
     }
   }
 
@@ -110,7 +110,7 @@ export class LanguageService {
       'introHeadline': 'Eine Herausforderung, die gemeistert werden soll?',
       'introText': 'Kontakt mit mir kann über dieses Formular aufgenommen werden. Ich bin offen für neue Ideen und bereit, meine Fähigkeiten in Projekte einzubringen.',
       'introFinal': 'Auf der Suche nach einem Frontend-Entwickler?',
-      'IntroFinalStrong': 'Kontaktieren Sie mich!',
+      'introFinalStrong': 'Kontaktieren Sie mich!',
       'placeholderName': 'Ihr Name',
       'placeholderEmail': 'Ihre E-Mail',
       'placeholderMessage': 'Ihre Nachricht',
@@ -122,13 +122,14 @@ export class LanguageService {
       'errorEmail': 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
       'errorText': 'Bitte geben Sie eine Nachricht ein.',
       'errorPrivacy': 'Bitte stimmen Sie der Datenschutzerklärung zu.',
+      'dialog': 'Ihre Nachricht wurde erfolgreich gesendet.',
     },
     "en": {
       'contact': 'Contact',
       'introHeadline': 'Facing a challenge that needs solving?',
       'introText': 'Contact with me can be made through this form. I\'m open to new ideas and ready to bring my skills to your projects.',
-      'IntroFinal': 'Looking for a Frontend developer?',
-      'IntroFinalStrong': 'Contact me!',
+      'introFinal': 'Looking for a Frontend developer?',
+      'introFinalStrong': 'Contact me!',
       'placeholderName': 'Your Name',
       'placeholderEmail': 'Your email',
       'placeholderMessage': 'Your message',
@@ -140,6 +141,7 @@ export class LanguageService {
       'errorEmail': 'Please enter a valid email address.',
       'errorText': 'Please enter a message.',
       'errorPrivacy': 'Please agree to the privacy policy.',
+      'dialog': 'Your message has been sent successfully.',
     }
   }
 

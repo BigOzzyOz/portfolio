@@ -4,7 +4,7 @@
     <input placeholder="{{ls.contact[ls.language]['placeholderName']}}" id="name" type="text" name="name"
       formControlName="name" autocomplete="name">
     <div class="error-field">
-      <span [class.error-message]="errorName">{{ls.contact[ls.language]['nameError']}}</span>
+      <span [class.error-message]="errorName">{{ls.contact[ls.language]['errorName']}}</span>
     </div>
   </div>
   <div class="email-field">
@@ -12,7 +12,7 @@
     <input placeholder="{{ls.contact[ls.language]['placeholderEmail']}}" id="email" type="email" name="email"
       formControlName="email" autocomplete="email">
     <div class="error-field">
-      <span [class.error-message]="errorEmail">{{ls.contact[ls.language]['emailError']}}</span>
+      <span [class.error-message]="errorEmail">{{ls.contact[ls.language]['errorEmail']}}</span>
     </div>
   </div>
   <div class="message-field">
@@ -20,7 +20,7 @@
     <textarea placeholder="{{ls.contact[ls.language]['placeholderMessage']}}" id="message" name="message" name="message"
       formControlName="message"></textarea>
     <div class="error-field">
-      <span [class.error-message]="errorText">{{ls.contact[ls.language]['messageError']}}</span>
+      <span [class.error-message]="errorText">{{ls.contact[ls.language]['errorText']}}</span>
     </div>
   </div>
   <div class="privacy-field">
@@ -36,7 +36,7 @@
     <input type="checkbox" id="privacy" name="privacy" formControlName="privacy"
       (ngModelChange)="privacyAccepted = !privacyAccepted">
     <div class="error-field">
-      <span [class.error-message]="errorPrivacy">{{ls.contact[ls.language]['privacyError']}}</span>
+      <span [class.error-message]="errorPrivacy">{{ls.contact[ls.language]['errorPrivacy']}}</span>
     </div>
   </div>
   <div class="button-field">

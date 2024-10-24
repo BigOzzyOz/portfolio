@@ -20,15 +20,27 @@ export class MainContentComponent {
 
   constructor() { }
 
-  scrollTo(anchor: string) {
-    let element = document.getElementById(anchor);
-    let headerOffset = 0;
-    let elementPosition = element!.getBoundingClientRect().top;
-    let offsetPosition = elementPosition + window.scrollY - headerOffset;
+  ngOnInit(): void {
+    if (window.location.search.includes('scrollTo=')) {
+      const anchor = window.location.search.split('scrollTo=')[1];
+      this.scrollTo(anchor);
+    }
+  }
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth"
-    });
+  scrollTo(anchor: string) {
+    const currentPath = window.location.pathname;
+    if (currentPath === '/') {
+      let element = document.getElementById(anchor);
+      let headerOffset = 0;
+      let elementPosition = element!.getBoundingClientRect().top;
+      let offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    } else {
+      window.location.href = '/?scrollTo=' + anchor;
+    }
   }
 }

@@ -9,13 +9,11 @@
       @for (link of headerLinks; track $index) {
         <li><a class="a-text" (click)="main.scrollTo(link)">{{ ls.header[ls.language][link] }}</a></li>
       }
-      <li class="language" (click)="languageBurger ? languageBurger = false : languageBurger = true"
-        (mouseover)="srcLanguage = 'assets/icons/globe-hover.png'; languageBurger = true"
-        (mouseout)="srcLanguage = 'assets/icons/globe.png'; languageBurger = false">
-        <img [src]="srcLanguage" alt="language">
+      <li class="language" (click)="languageBurger ? languageBurger = false : languageBurger = true">
+        <img [src]="languageBurger ? 'assets/icons/globe-hover.png' : 'assets/icons/globe.png'" alt="language">
         <div class="language-menu" [style.transform]="languageBurger ? 'scale(1)' : 'scale(0)'">
-          <p (click)="ls.setLanguage('de'); languageBurger = false">Deutsch</p>
-          <p (click)="ls.setLanguage('en'); languageBurger = false">English</p>
+          <p (click)=" $event.stopPropagation(); ls.setLanguage('de'); languageBurger = false">Deutsch</p>
+          <p (click)=" $event.stopPropagation(); ls.setLanguage('en'); languageBurger = false">English</p>
         </div>
       </li>
     </ul>

@@ -27,7 +27,7 @@ export class ContactFormComponent {
     message: new FormControl('', [Validators.required, Validators.minLength(4)]),
     privacy: new FormControl('', [Validators.required, Validators.requiredTrue])
   });
-  mailTest = true;
+  mailTest = false;
   http = inject(HttpClient);
 
   post = {

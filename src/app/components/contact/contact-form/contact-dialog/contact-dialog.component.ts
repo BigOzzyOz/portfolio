@@ -1,5 +1,6 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { ContactFormComponent } from '../contact-form.component';
+import { LanguageService } from '../../../../services/language.service';
 
 @Component({
   selector: 'app-contact-dialog',
@@ -9,6 +10,7 @@ import { ContactFormComponent } from '../contact-form.component';
   styleUrl: './contact-dialog.component.scss'
 })
 export class ContactDialogComponent {
+  ls = inject(LanguageService);
 
   constructor(private elementRef: ElementRef, public contactForm: ContactFormComponent) { }
 

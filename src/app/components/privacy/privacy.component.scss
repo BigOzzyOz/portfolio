@@ -1,11 +1,11 @@
 @mixin back-arrow() {
   position: absolute;
   cursor: pointer;
-  right: 24px;
+  right: -8px;
 }
 
 .privacy {
-  margin: 120px 0 32px 0;
+  margin: 120px 0 80px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
 
 .back-arrow-bottom {
   @include back-arrow();
-  bottom: -8px;
+  bottom: -72px;
 
   img {
     @extend .back-arrow-img;
