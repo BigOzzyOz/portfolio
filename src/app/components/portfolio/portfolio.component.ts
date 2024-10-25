@@ -1,4 +1,4 @@
-import { Component, inject, Input, NgModule } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../interfaces/project';
@@ -11,9 +11,14 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
+
 export class PortfolioComponent {
   ls = inject(LanguageService);
+  projectService = inject(ProjectService);
 
+  @Input() index: number = 0;
+  @Input() disabled: boolean = false;
+  @Input() language: string = '';
   @Input() project: Project = {
     name: '',
     technologies: [],
@@ -23,9 +28,5 @@ export class PortfolioComponent {
     img: ''
   };
 
-  @Input() index: number = 0;
-  @Input() disabled: boolean = false;
-  @Input() language: string = '';
-
-  constructor(public projectService: ProjectService) { }
+  constructor() { }
 }

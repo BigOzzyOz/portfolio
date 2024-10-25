@@ -42,17 +42,6 @@ export class ProjectService {
       gitLink: 'https://github.com/BigOzzyOz/pokedex',
       img: 'assets/img/pokedex.png'
     },
-    // {
-    //   name: 'Ring of Fire',
-    //   technologies: ['Angular', 'TypeScript', 'Firebase', 'SCSS'],
-    //   description: {
-    //     en: 'Ring of Fire is card game where you can play against friends online or on your computer.',
-    //     de: 'Ring of Fire is card game where you can play against friends online or on your computer.',
-    //   },
-    //   link: 'https://ring-of-fire.jan-holtschke.de/',
-    //   gitLink: 'https://github.com/BigOzzyOz/ring-of-fire',
-    //   img: 'assets/img/ring-of-fire.png'
-    // }
   ]
 
   currentProjects: Project[] = [

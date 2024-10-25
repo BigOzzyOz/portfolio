@@ -12,9 +12,12 @@ import { LanguageService } from '../../../services/language.service';
 })
 
 export class ProjectComponent {
-
   ls = inject(LanguageService);
   projectService = inject(ProjectService);
+
+  @Input() index: number = 0;
+  @Input() disabled: boolean = false;
+  @Input() language: string = '';
   @Input() project: Project = {
     name: '',
     technologies: [],
@@ -23,9 +26,6 @@ export class ProjectComponent {
     gitLink: '',
     img: ''
   };
-  @Input() index: number = 0;
-  @Input() disabled: boolean = false;
-  @Input() language: string = '';
 
 
   constructor() { }

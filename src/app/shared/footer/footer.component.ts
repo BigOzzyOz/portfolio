@@ -9,6 +9,7 @@ import { MainContentComponent } from '../../components/main-content/main-content
   templateUrl: './footer.component.html',
   styleUrls: ['./../../../style/styles.scss', './footer.component.scss',]
 })
+
 export class FooterComponent {
   main = inject(MainContentComponent)
 }

@@ -10,9 +10,19 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })
+
 export class ReferencesComponent {
   ls = inject(LanguageService);
   ref = inject(ReferencesService);
+
+  currentRefIndex: number = 0;
+  source: string = '';
+  nextImgSource: string = '';
+  animate: boolean = false;
+  animateLeft: boolean = false;
+  animateClick: boolean = false;
+  animateRight: boolean = false;
+  timeOut: any;
 
   currentRef: References = {
     name: {},
@@ -26,18 +36,11 @@ export class ReferencesComponent {
     img: ''
   };
 
-  currentRefIndex: number = 0;
-  source: string = '';
-  nextImgSource: string = '';
-  animate: boolean = false;
-  animateLeft: boolean = false;
-  animateClick: boolean = false;
-  animateRight: boolean = false;
-  timeOut: any;
 
   constructor() {
     this.getReferences(this.currentRefIndex);
   }
+
 
   getReferences(index: number) {
     this.currentRef = this.ref.references[index];
@@ -48,17 +51,20 @@ export class ReferencesComponent {
     }, 15000);
   }
 
+
   next(index: number) {
     this.prepareChange(index);
     this.animateRight = true;
     setTimeout(() => this.getReferences(index), 1450);
   }
 
+
   previous(index: number) {
     this.prepareChange(index);
     this.animateLeft = true;
     setTimeout(() => this.getReferences(index), 1450);
   }
+
 
   click(index: number) {
     this.prepareChange(index);
@@ -67,11 +73,13 @@ export class ReferencesComponent {
     setTimeout(() => this.getReferences(index), 1450);
   }
 
+
   prepareChange(index: number) {
-    this.timeOut ? clearInterval(this.timeOut) : '';
+    this.timeOut ? clearTimeout(this.timeOut) : '';
     this.nextImgSource = this.ref.references[index].img;
     this.animate = true;
   }
+
 
   resetBoolean() {
     this.animateClick = false;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
@@ -8,10 +8,12 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
+
 export class ImprintComponent {
+  ls = inject(LanguageService);
 
   source: string = 'assets/icons/back-arrow.png';
 
-  constructor(public lS: LanguageService) {
-  }
+  constructor() { }
+
 }

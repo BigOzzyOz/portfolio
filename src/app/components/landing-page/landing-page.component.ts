@@ -11,9 +11,11 @@ import { MainContentComponent } from '../main-content/main-content.component';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
 export class LandingPageComponent {
   main = inject(MainContentComponent);
+  ls = inject(LanguageService);
 
-  constructor(public ls: LanguageService) { }
+  constructor() { }
 
 }

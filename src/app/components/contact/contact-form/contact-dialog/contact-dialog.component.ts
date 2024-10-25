@@ -9,12 +9,14 @@ import { LanguageService } from '../../../../services/language.service';
   templateUrl: './contact-dialog.component.html',
   styleUrl: './contact-dialog.component.scss'
 })
+
 export class ContactDialogComponent {
   ls = inject(LanguageService);
 
   constructor(private elementRef: ElementRef, public contactForm: ContactFormComponent) { }
 
   @HostListener('document:click', ['$event'])
+
   onDocumentClick(event: MouseEvent) {
     if (!this.elementRef.nativeElement.contains(event.target)) {
       this.closeModal();

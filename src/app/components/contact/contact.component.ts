@@ -9,6 +9,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
   ls = inject(LanguageService);
 

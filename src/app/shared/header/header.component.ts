@@ -12,21 +12,19 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
 
+export class HeaderComponent {
+  ls = inject(LanguageService);
   main = inject(MainContentComponent);
 
   srcLanguage: string = 'assets/icons/globe.png';
   languageBurger: boolean = false;
   burger: string = 'assets/icons/burger.png';
   burgerMenu: boolean = false;
+  headerLinks: string[] = ['aboutMe', 'skills', 'portfolio', 'references', 'contact'];
 
-  headerLinks = ['aboutMe', 'skills', 'portfolio', 'references', 'contact'];
 
-
-  constructor(public ls: LanguageService) {
-    console.log(ls.header[ls.language]);
-  }
+  constructor() { }
 
   toggleBurger(e: Event) {
     if (e.type === 'mouseout') this.burger = this.burgerMenu ? 'assets/icons/close-final.png' : 'assets/icons/burger.png';
@@ -39,5 +37,4 @@ export class HeaderComponent {
       }, 125);
     }
   }
-
 }

@@ -15,10 +15,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
+
 @Injectable({ providedIn: 'root' })
+
 export class MainContentComponent {
 
   constructor() { }
+
 
   ngOnInit(): void {
     if (window.location.search.includes('scrollTo=')) {
@@ -27,20 +30,21 @@ export class MainContentComponent {
     }
   }
 
+
   scrollTo(anchor: string) {
     const currentPath = window.location.pathname;
-    if (currentPath === '/') {
-      let element = document.getElementById(anchor);
-      let headerOffset = 0;
-      let elementPosition = element!.getBoundingClientRect().top;
-      let offsetPosition = elementPosition + window.scrollY - headerOffset;
+    if (currentPath === '/') this.scrollOnPage(anchor);
+    else window.location.href = '/?scrollTo=' + anchor;
+  }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    } else {
-      window.location.href = '/?scrollTo=' + anchor;
-    }
+
+  scrollOnPage(anchor: string) {
+    let element = document.getElementById(anchor);
+    let elementPosition = element!.getBoundingClientRect().top;
+    let offsetPosition = elementPosition + window.scrollY;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
   }
 }
