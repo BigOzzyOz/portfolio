@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class LanguageService {
-  language: string = 'de';
+  language: string = sessionStorage.getItem('lang') || this.getBrowserLanguage();
 
   header: { [key: string]: { [key: string]: string } } = {
     'de': {
@@ -148,19 +148,24 @@ export class LanguageService {
 
 
   constructor() {
-    this.language = this.getBrowserLanguage() === 'de' ? 'de' : 'en';
+    // if (window.location.search.includes('lang=')) {
+    //   const language = window.location.search.split('lang=')[1];
+    //   this.setLanguage(language);
+    // } else this.getBrowserLanguage()
   }
 
 
-  getBrowserLanguage() {
+  getBrowserLanguage(): string {
     const browserLanguages = navigator.languages ? navigator.languages : [navigator.language];
-    const language = browserLanguages[0];
-    return language.split('-')[0];
+    const language = browserLanguages[0].split('-')[0] === 'de' ? 'de' : 'en';
+    sessionStorage.setItem('lang', language);
+    return language;
   }
 
 
   setLanguage(language: string) {
     this.language = language;
+    sessionStorage.setItem('lang', language);
   }
 
 

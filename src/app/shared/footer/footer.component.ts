@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SocialLinksComponent } from "../social-links/social-links.component";
 import { MainContentComponent } from '../../components/main-content/main-content.component';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,6 @@ import { MainContentComponent } from '../../components/main-content/main-content
 })
 
 export class FooterComponent {
-  main = inject(MainContentComponent)
+  ls = inject(LanguageService);
+  main = inject(MainContentComponent);
 }
