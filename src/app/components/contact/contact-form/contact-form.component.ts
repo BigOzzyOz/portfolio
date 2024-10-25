@@ -26,9 +26,9 @@ export class ContactFormComponent {
   submitSuccess: boolean = false;
 
   contactMessage = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-ZäöüÄÖÜß\\s]+$')]),
+    name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-ZäöüÄÖÜß\\s]+$'), Validators.minLength(3), Validators.maxLength(40)]),
     email: new FormControl('', [Validators.email, Validators.required, Validators.pattern('[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')]),
-    message: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    message: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(1000)]),
     privacy: new FormControl('', [Validators.required, Validators.requiredTrue])
   });
 
@@ -103,6 +103,13 @@ export class ContactFormComponent {
 
   testMode() {
     return this.contactMessage.dirty && this.contactMessage.valid && this.mailTest;
+  }
+
+  checkValidation(error: boolean, validation: {}) {
+    if (!error) return false;
+    else if (error && validation) return false;
+    else if (error && !validation) return true;
+    else return true;
   }
 }
 

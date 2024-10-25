@@ -37,4 +37,11 @@ export class HeaderComponent {
       }, 125);
     }
   }
+
+
+  checkBurgerMenu() {
+    this.languageBurger = false;
+    this.burgerMenu = false;
+    this.burger = this.burgerMenu ? 'assets/icons/close-final.png' : 'assets/icons/burger.png'
+  }
 }

@@ -1,6 +1,7 @@
 @import 'variables';
 
 .portfolio {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,6 +108,10 @@ app-project {
       }
     }
   }
+
+  .portfolio-shadow-container {
+    left: -450px
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -122,8 +127,6 @@ app-project {
     p {
       font-size: 16px;
     }
-
-
   }
 
   .top-portfolio {
@@ -134,5 +137,15 @@ app-project {
         top: 24px;
       }
     }
+  }
+
+  .portfolio-shadow-container {
+    left: -550px
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-shadow-container {
+    left: -650px
   }
 }

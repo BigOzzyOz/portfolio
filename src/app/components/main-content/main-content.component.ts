@@ -26,25 +26,34 @@ export class MainContentComponent {
   ngOnInit(): void {
     if (window.location.search.includes('scrollTo=')) {
       const anchor = window.location.search.split('scrollTo=')[1];
-      this.scrollTo(anchor);
+      setTimeout(() => this.scrollTo(anchor, 0), 600);
     }
   }
 
 
-  scrollTo(anchor: string) {
+  scrollTo(anchor: string, offset: number = 0) {
     const currentPath = window.location.pathname;
-    if (currentPath === '/') this.scrollOnPage(anchor);
+    if (currentPath === '/' || anchor === 'home') this.scrollOnPage(anchor, offset);
     else window.location.href = '/?scrollTo=' + anchor;
   }
 
 
-  scrollOnPage(anchor: string) {
+  scrollOnPage(anchor: string, offset: number = 0) {
     let element = document.getElementById(anchor);
     let elementPosition = element!.getBoundingClientRect().top;
-    let offsetPosition = elementPosition + window.scrollY;
+    let offsetPosition = elementPosition + window.scrollY - offset;
+    this.setNewURL();
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth"
     });
+  }
+
+
+  setNewURL() {
+    const url = new URL(window.location.href);
+    const params = url.searchParams;
+    params.delete('scrollTo');
+    window.history.replaceState({}, '', url.toString());
   }
 }

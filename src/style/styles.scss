@@ -67,6 +67,7 @@ strong {
 }
 
 body {
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   background-color: $background-color;
@@ -78,9 +79,8 @@ app-root {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1920px;
   overflow: hidden;
-  padding: 0 96px;
+  align-items: center;
 
   .app-header {
     position: fixed;
@@ -88,21 +88,29 @@ app-root {
     left: 0px;
     right: 0px;
     margin: 0 auto;
-    max-width: 1920px;
     z-index: 10;
     background-color: $background-color;
-    padding: 0 96px;
-  }
-
-  router-outlet {
-    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .app-footer {
     border-top: 4px solid$primary-color;
-    flex-shrink: 0;
-    width: calc(100% + 96px * 2);
-    margin-left: -96px;
+    width: 100%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+  }
+
+  app-main-content,
+  app-imprint,
+  app-privacy {
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 96px;
+    width: 100%;
+    flex: 1;
   }
 }
 
@@ -179,30 +187,23 @@ button {
 
 @media (max-width: 1199.98px) {
   app-root {
-    padding: 0 56px;
 
-    .app-header {
+    app-main-content,
+    app-imprint,
+    app-privacy {
       padding: 0 56px;
-    }
-
-    .app-footer {
-      width: calc(100% + 56px * 2);
-      margin-left: -56px;
     }
   }
 }
 
 @media (max-width: 991.98px) {
   app-root {
-    padding: 0 32px;
 
-    .app-header {
+
+    app-main-content,
+    app-imprint,
+    app-privacy {
       padding: 0 32px;
-    }
-
-    .app-footer {
-      width: calc(100% + 32px * 2);
-      margin-left: -32px;
     }
   }
 }
@@ -223,15 +224,11 @@ button {
 
 @media (max-width: 575.98px) {
   app-root {
-    padding: 0 16px;
 
-    .app-header {
+    app-main-content,
+    app-imprint,
+    app-privacy {
       padding: 0 16px;
-    }
-
-    .app-footer {
-      width: calc(100% + 16px * 2);
-      margin-left: -16px;
     }
   }
 }

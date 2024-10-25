@@ -1,7 +1,7 @@
-<section class='imprint'>
+<section class='imprint' id="home">
 
   <div class="back-arrow-top">
-    <a href="**">
+    <a (click)="main.scrollTo('contact')">
       <img [src]="source" (mouseover)="source = 'assets/icons/back-arrow-hover.png'"
         (mouseout)="source = 'assets/icons/back-arrow.png'" alt="back arrow">
     </a>
@@ -130,7 +130,7 @@
   }
 
   <div class="back-arrow-bottom">
-    <a href="**">
+    <a (click)="main.scrollTo('contact')">
       <img [src]="source" (mouseover)="source = 'assets/icons/back-arrow-hover.png'"
         (mouseout)="source = 'assets/icons/back-arrow.png'" alt="back arrow">
     </a>

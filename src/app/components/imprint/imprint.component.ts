@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
+import { MainContentComponent } from '../main-content/main-content.component';
 
 @Component({
   selector: 'app-imprint',
@@ -11,6 +12,7 @@ import { LanguageService } from '../../services/language.service';
 
 export class ImprintComponent {
   ls = inject(LanguageService);
+  main = inject(MainContentComponent);
 
   source: string = 'assets/icons/back-arrow.png';
 
