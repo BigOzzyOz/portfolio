@@ -146,6 +146,15 @@ export class LanguageService {
     }
   }
 
+  footer: { [key: string]: { [key: string]: string } } = {
+    'de': {
+      'imprint': 'Impressum',
+    },
+    "en": {
+      'imprint': 'Legal Notice',
+    },
+  }
+
 
   constructor() {
     // if (window.location.search.includes('lang=')) {
