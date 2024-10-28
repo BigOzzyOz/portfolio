@@ -156,12 +156,7 @@ export class LanguageService {
   }
 
 
-  constructor() {
-    // if (window.location.search.includes('lang=')) {
-    //   const language = window.location.search.split('lang=')[1];
-    //   this.setLanguage(language);
-    // } else this.getBrowserLanguage()
-  }
+  constructor() { }
 
 
   getBrowserLanguage(): string {
