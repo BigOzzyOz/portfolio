@@ -10,6 +10,17 @@ export class ProjectService {
 
   doneProjects: Project[] = [
     {
+      name: 'DA Bubble',
+      technologies: ['Angular', 'TypeScript', 'Firebase'],
+      description: {
+        de: 'DA Bubble ist ein Slack-Klon, der eine Plattform für die Kommunikation und Zusammenarbeit in Teams bietet. Mit Funktionen wie Nachrichten, Kanälen und Dateifreigabe ermöglicht DA Bubble eine effiziente und benutzerfreundliche Interaktion zwischen den Teammitgliedern.',
+        en: 'DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.',
+      },
+      link: 'https://da-bubble.jan-holtschke.de/',
+      gitLink: 'https://github.com/BigOzzyOz/da-bubble',
+      img: 'assets/img/da-bubble.png'
+    },
+    {
       name: 'Join',
       technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
       description: {
@@ -44,19 +55,7 @@ export class ProjectService {
     },
   ]
 
-  currentProjects: Project[] = [
-    {
-      name: 'DA Bubble',
-      technologies: ['Angular', 'TypeScript', 'Firebase'],
-      description: {
-        de: 'DA Bubble ist ein Slack-Klon, der eine Plattform für die Kommunikation und Zusammenarbeit in Teams bietet. Mit Funktionen wie Nachrichten, Kanälen und Dateifreigabe ermöglicht DA Bubble eine effiziente und benutzerfreundliche Interaktion zwischen den Teammitgliedern.',
-        en: 'DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.',
-      },
-      link: '',
-      gitLink: '',
-      img: 'assets/img/da-bubble.png'
-    },
-  ]
+  currentProjects: Project[] = []
 
   futureProjects: Project[] = []
 
