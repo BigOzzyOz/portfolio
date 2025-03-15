@@ -17,12 +17,12 @@ export class SkillCollectionComponent {
   source: string = 'assets/icons/skills/continually-learning-orange.png'
 
   skillsKnown: { name: string, img: string }[] = [
+    { name: 'Angular', img: 'assets/icons/skills/angular.png' },
+    { name: 'JavaScript', img: 'assets/icons/skills/javascript.png' },
+    { name: 'TypeScript', img: 'assets/icons/skills/typescript.png' },
     { name: 'HTML', img: 'assets/icons/skills/html.png' },
     { name: 'CSS', img: 'assets/icons/skills/css.png' },
     { name: 'SASS', img: 'assets/icons/skills/sass.svg' },
-    { name: 'JavaScript', img: 'assets/icons/skills/javascript.png' },
-    { name: 'TypeScript', img: 'assets/icons/skills/typescript.png' },
-    { name: 'Angular', img: 'assets/icons/skills/angular.png' },
     { name: 'Firebase', img: 'assets/icons/skills/firebase.png' },
     { name: 'Git', img: 'assets/icons/skills/git.png' },
     { name: 'Rest-Api', img: 'assets/icons/skills/api.svg' },
@@ -48,6 +48,7 @@ export class SkillCollectionComponent {
   skillsToLearn: { name: string, img: string }[] = [
     { name: 'Vue.js', img: 'assets/icons/skills/vuejs.svg' },
     { name: 'React', img: 'assets/icons/skills/react.svg' },
+    { name: 'UI5 & Fiori', img: 'assets/icons/skills/sap.svg' },
   ];
 
   constructor() { }

@@ -41,11 +41,11 @@
 
     li {
       display: flex;
+      align-items: center;
       gap: 24px;
 
       img {
         position: relative;
-        top: 8px;
         width: 32px;
         height: 32px;
         transition: all 125ms ease-in-out;

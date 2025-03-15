@@ -37,18 +37,18 @@ export class LanguageService {
 
   aboutMe: { [key: string]: { [key: string]: string } } = {
     'de': {
-      'aboutMe': 'Über mich',
-      'intro': 'Hi, ich bin ein Frontend-Entwickler aus der Nähe von Mannheim und Heidelberg. Ich begeistere mich dafür, visuell ansprechende und benutzerfreundliche Websites und Anwendungen zu entwickeln. Die grenzenlosen Möglichkeiten in der IT motivieren mich, stetig dazuzulernen, einschließlich Fullstack- und Backend-Entwicklung, um mein Können zu erweitern.',
-      'location': 'Flexibel in der Arbeitsweise, bin ich sowohl vor Ort im Raum Mannheim oder Heidelberg als auch remote effizient einsetzbar.',
-      'development': 'Ich habe eine offene Einstellung und bin immer auf der Suche nach neuen Herausforderungen, die mir helfen, mein Wissen zu erweitern und meine Fähigkeiten weiterzuentwickeln.',
-      'innovation': 'Bei meiner Arbeit ist Programmieren mehr als nur Code zu schreiben; es ist eine kreative Methode zur Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, die Ihnen helfen, Ihre Ziele zu erreichen und Ihre Ideen zum Leben zu erwecken.',
+      'aboutMe': 'Über mich',
+      'intro': 'Ich bin Jan, Frontend Entwickler aus der Rhein-Neckar-Region. Meine Stärke: digitale Lösungen, die technisch präzise sind und Menschen mühelos abholen. Für mich entsteht gelungene Software dort, wo Ästhetik und Funktionalität zusammenfinden.',
+      'location': 'Ob im Büro vor Ort, im Homeoffice oder einer sinnvollen Kombination: Ich arbeite dort, wo das Team am produktivsten ist. Wichtiger als der Ort sind mir klare Abläufe und Raum für fokussiertes Arbeiten.',
+      'development': 'Mein Fokus liegt auf modernem Frontend Development. Aktuell beginne ich, mich mit Backend Themen zu beschäftigen, um Systeme besser zu verstehen. Mein Ziel: Nicht alles können, aber Zusammenhänge erkennen.',
+      'innovation': 'Ich schreibe Code, der heute funktioniert und morgen anpassbar bleibt. Mit klaren Strukturen für einfache Wartung und genug Flexibilität, um auf neue Anforderungen zu reagieren.'
     },
-    "en": {
+    'en': {
       'aboutMe': 'About me',
-      'intro': 'Hi, I\'m a Frontend Developer from the Mannheim and Heidelberg area. I am passionate about creating visually captivating and user-friendly websites and applications. Inspired by the endless possibilities in IT, I continuously strive to expand my knowledge, including Fullstack and Backend development, to enhance my skill set.',
-      'location': 'Flexible in my approach, I can be effectively deployed both on-site in the Mannheim or Heidelberg area and remotely.',
-      'development': 'I maintain an open-minded attitude and am always looking for new challenges that help me expand my knowledge and further develop my skills.',
-      'innovation': 'In my work, programming is more than just writing code; it\'s a creative way to solve problems. I take pride in breaking down complex technical issues into simple, user-friendly       solutions that help you achieve your goals and bring your ideas to life.',
+      'intro': 'I\'m Jan, a frontend developer from the Rhine-Neckar region. My strength: building digital solutions that are technically precise yet intuitively accessible. To me, great software emerges where aesthetics meet functionality.',
+      'location': 'Whether onsite, remote, or a smart combination: I work where the team is most productive. More important than location to me are clear processes and space for focused work.',
+      'development': 'My expertise lies in modern frontend development. I\'m currently starting to explore backend topics to better understand system architectures. My aim: Not to know everything, but to see how pieces connect.',
+      'innovation': 'I write code that works today and adapts tomorrow. With clean structures for easy maintenance and enough flexibility to evolve with new requirements.'
     }
   }
 
