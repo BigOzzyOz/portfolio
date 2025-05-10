@@ -12,7 +12,7 @@ export class SocialLinksComponent {
   socialLinks = [
     { img: 'github', src: 'https://github.com/BigOzzyOz' },
     { img: 'mail', src: 'mailto:kontakt@jan-holtschke.de' },
-    { img: 'linkedin', src: 'https://www.linkedin.com/in/jan-holtschke/' },
+    { img: 'linkedin', src: 'https://www.linkedin.com/in/jan-holtschke' },
   ];
 
 }

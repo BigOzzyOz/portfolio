@@ -10,6 +10,17 @@ export class ProjectService {
 
   doneProjects: Project[] = [
     {
+      name: 'Join',
+      technologies: ['JavaScript', 'Django', 'Django REST Framework', 'HTML', 'CSS'],
+      description: {
+        'de': 'Join ist ein objektorientiertes Kanban-Board mit eigenem Backend, das effizientes Aufgabenmanagement ermöglicht. Es bietet eine intuitive Benutzeroberfläche zur Organisation von Aufgaben, zur Fortschrittsverfolgung und zur kollaborativen Teamarbeit.',
+        'en': 'Join is an object-oriented Kanban board with a custom backend, designed for efficient task management. It offers an intuitive interface to organize tasks, track progress, and support collaborative teamwork.',
+      },
+      link: 'https://join.jan-holtschke.de/',
+      gitLink: 'https://github.com/BigOzzyOz/join',
+      img: 'assets/img/join.png'
+    },
+    {
       name: 'DA Bubble',
       technologies: ['Angular', 'TypeScript', 'Firebase'],
       description: {
@@ -21,15 +32,15 @@ export class ProjectService {
       img: 'assets/img/da-bubble.png'
     },
     {
-      name: 'Join',
-      technologies: ['JavaScript', 'Firebase', 'HTML', 'CSS'],
+      name: 'Coderr',
+      technologies: ['Phython', 'Django', 'Django REST Framework'],
       description: {
-        'de': 'Join ist ein Kanban-Board, das effizientes Aufgabenmanagement ermöglicht. Es bietet eine intuitive Benutzeroberfläche, um Aufgaben zu organisieren, Fortschritte zu verfolgen und Teams kollaborativ arbeiten zu lassen.',
-        'en': 'Join is a Kanban board designed for efficient task management. It features an intuitive interface to organize tasks, track progress, and enable collaborative teamwork.',
+        'de': 'Coderr ist eine Freelancer-Plattform im Stil von Fiverr. Das Backend wurde mit Django und der Django REST Framework entwickelt und ermöglicht Funktionen wie das Erstellen von Angeboten, das Annehmen von Aufträgen und das Abgeben von Bewertungen.',
+        'en': 'Coderr is a freelancer platform inspired by Fiverr. The backend was developed using Django and Django REST Framework and supports features such as creating offers, handling orders, and submitting reviews.',
       },
-      link: 'https://join.jan-holtschke.de/',
-      gitLink: 'https://github.com/BigOzzyOz/join',
-      img: 'assets/img/join.png'
+      link: 'https://coderr.jan-holtschke.de/',
+      gitLink: 'https://github.com/BigOzzyOz/be-coderr',
+      img: 'assets/img/coderr.png'
     },
     {
       name: 'Sharkie',
@@ -42,6 +53,13 @@ export class ProjectService {
       gitLink: 'https://github.com/BigOzzyOz/sharkie_game',
       img: 'assets/img/sharkie.png'
     },
+  ]
+
+  currentProjects: Project[] = []
+
+  futureProjects: Project[] = []
+
+  outdatedProjects: Project[] = [
     {
       name: 'Pokédex',
       technologies: ['JavaScript', 'Api', 'HTML', 'CSS'],
@@ -54,10 +72,6 @@ export class ProjectService {
       img: 'assets/img/pokedex.png'
     },
   ]
-
-  currentProjects: Project[] = []
-
-  futureProjects: Project[] = []
 
   constructor() { }
 
