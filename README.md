@@ -8,52 +8,56 @@ This portfolio demonstrates my full-stack web development skills through a diver
 This portfolio includes the following projects:
 
 ### Join
-*   **Technologies:** JavaScript, Django, Django REST Framework, HTML, CSS
-*   **Description:** Join is an object-oriented Kanban board with a custom backend, designed for efficient task management. It offers an intuitive interface to organize tasks, track progress, and support collaborative teamwork.
-*   **Live Demo:** [join.jan-holtschke.de](https://join.jan-holtschke.de/)
-*   **GitHub:** [BigOzzyOz/join](https://github.com/BigOzzyOz/join)
+
+* **Technologies:** JavaScript, Django, Django REST Framework, HTML, CSS
+* **Description:** Join is an object-oriented Kanban board with a custom backend, designed for efficient task management. It offers an intuitive interface to organize tasks, track progress, and support collaborative teamwork.
+* **Live Demo:** [join.jan-holtschke.de](https://join.jan-holtschke.de/)
+* **GitHub:** [BigOzzyOz/join](https://github.com/BigOzzyOz/join)
 
 ### DA Bubble
-*   **Technologies:** Angular, TypeScript, Firebase
-*   **Description:** DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.
-*   **Live Demo:** [da-bubble.jan-holtschke.de](https://da-bubble.jan-holtschke.de/)
-*   **GitHub:** [BigOzzyOz/da-bubble](https://github.com/BigOzzyOz/da-bubble)
+
+* **Technologies:** Angular, TypeScript, Firebase
+* **Description:** DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.
+* **Live Demo:** [da-bubble.jan-holtschke.de](https://da-bubble.jan-holtschke.de/)
+* **GitHub:** [BigOzzyOz/da-bubble](https://github.com/BigOzzyOz/da-bubble)
 
 ### Coderr
-*   **Technologies:** Python, Django, Django REST Framework
-*   **Description:** Coderr is a freelancer platform inspired by Fiverr. The backend was developed using Django and Django REST Framework and supports features such as creating offers, handling orders, and submitting reviews.
-*   **Live Demo:** [coderr.jan-holtschke.de](https://coderr.jan-holtschke.de/)
-*   **GitHub:** [BigOzzyOz/be-coderr](https://github.com/BigOzzyOz/be-coderr)
+
+* **Technologies:** Python, Django, Django REST Framework
+* **Description:** Coderr is a freelancer platform inspired by Fiverr. The backend was developed using Django and Django REST Framework and supports features such as creating offers, handling orders, and submitting reviews.
+* **Live Demo:** [coderr.jan-holtschke.de](https://coderr.jan-holtschke.de/)
+* **GitHub:** [BigOzzyOz/be-coderr](https://github.com/BigOzzyOz/be-coderr)
 
 ### Sharkie
-*   **Technologies:** JavaScript, HTML, CSS
-*   **Description:** Sharkie is a 2D side-scroller game where players must collect coins and poison to defeat the Orca. Along the way, they must avoid jellyfish and pufferfish to reach their goal.
-*   **Live Demo:** [sharkie.jan-holtschke.de](https://sharkie.jan-holtschke.de/)
-*   **GitHub:** [BigOzzyOz/sharkie_game](https://github.com/BigOzzyOz/sharkie_game)
+
+* **Technologies:** JavaScript, HTML, CSS
+* **Description:** Sharkie is a 2D side-scroller game where players must collect coins and poison to defeat the Orca. Along the way, they must avoid jellyfish and pufferfish to reach their goal.
+* **Live Demo:** [sharkie.jan-holtschke.de](https://sharkie.jan-holtschke.de/)
+* **GitHub:** [BigOzzyOz/sharkie_game](https://github.com/BigOzzyOz/sharkie_game)
 
 ## My Skills
 
-*   Angular
-*   Django
-*   JavaScript
-*   TypeScript
-*   Python
-*   HTML
-*   CSS
-*   SASS
-*   Rest-Api
-*   PostgreSQL
-*   SQL
-*   Git
-*   Scrum
-*   Firebase
-*   Material Design
+* Angular
+* Django
+* JavaScript
+* TypeScript
+* Python
+* HTML
+* CSS
+* SASS
+* Rest-Api
+* PostgreSQL
+* SQL
+* Git
+* Scrum
+* Firebase
+* Material Design
 
 ## Setup and Installation
 
-1.  Clone the repository: `git clone https://github.com/BigOzzyOz/portfolio.git`
-2.  Navigate to the project directory: `cd portfolio`
-3.  Install dependencies: `npm install`
+1. Clone the repository: `git clone https://github.com/BigOzzyOz/portfolio.git`
+2. Navigate to the project directory: `cd portfolio`
+3. Install dependencies: `npm install`
 
 ## Development Server
 
