@@ -10,15 +10,8 @@
     <img [src]="source" alt="learning">
     <p>{{ls.skills[ls.language]['continue']}}</p>
     <div class="continue-window">
-      <p>{{ls.skills[ls.language]['soon']}}</p>
-      @for(skill of futureSkills; track $index) {
-        <div class="skill-small">
-          <img src="{{skill.img}}" alt="{{skill.name}}">
-          <p>{{skill.name}}</p>
-        </div>
-      }
-      <p>{{ls.skills[ls.language]['interest']}}</p>
-      @for(skill of skillsToLearn; track $index) {
+      <p>{{ls.skills[ls.language]['focus']}}</p>
+      @for(skill of skillsFocus; track $index) {
         <div class="skill-small">
           <img src="{{skill.img}}" alt="{{skill.name}}">
           <p>{{skill.name}}</p>

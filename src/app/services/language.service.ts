@@ -38,17 +38,17 @@ export class LanguageService {
   aboutMe: { [key: string]: { [key: string]: string } } = {
     'de': {
       'aboutMe': 'Über mich',
-      'intro': 'Ich bin Jan, Frontend Entwickler aus der Rhein-Neckar-Region. Meine Stärke: digitale Lösungen, die technisch präzise sind und Menschen mühelos abholen. Für mich entsteht gelungene Software dort, wo Ästhetik und Funktionalität zusammenfinden.',
-      'location': 'Ob im Büro vor Ort, im Homeoffice oder einer sinnvollen Kombination: Ich arbeite dort, wo das Team am produktivsten ist. Wichtiger als der Ort sind mir klare Abläufe und Raum für fokussiertes Arbeiten.',
-      'development': 'Mein Fokus liegt auf modernem Frontend Development. Aktuell beginne ich, mich mit Backend Themen zu beschäftigen, um Systeme besser zu verstehen. Mein Ziel: Nicht alles können, aber Zusammenhänge erkennen.',
-      'innovation': 'Ich schreibe Code, der heute funktioniert und morgen anpassbar bleibt. Mit klaren Strukturen für einfache Wartung und genug Flexibilität, um auf neue Anforderungen zu reagieren.'
+      'intro': 'Hi, ich bin Jan, Fullstack Developer aus der Rhein-Neckar-Region. Ich liebe es, visuell ansprechende Frontends zu entwickeln und sie mit technisch robusten Systemen zu verbinden. Die grenzenlosen Möglichkeiten in der IT motivieren mich jeden Tag, neue, durchdachte Lösungen zu schaffen.',
+      'location': 'Ich bin flexibel in der Arbeitsweise. Ob im Büro in der Region Mannheim/Heidelberg oder remote: Ich arbeite dort, wo das Team am produktivsten ist. Klare Abläufe und Raum für fokussiertes Arbeiten sind mir dabei am wichtigsten.',
+      'development': 'Meine solide Basis liegt im modernen Frontend Development. Durch meine Erweiterung auf Fullstack habe ich gelernt, Anwendungen von der Datenbank bis zur Oberfläche zu konzipieren. Ich suche ständig nach Herausforderungen, um mein Wissen und meine Fähigkeiten zu erweitern.',
+      'innovation': 'Programmieren ist für mich mehr als Code schreiben: Es ist eine kreative Methode zur Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln, die Ihre Ideen zum Leben erwecken.'
     },
     'en': {
       'aboutMe': 'About me',
-      'intro': 'I\'m Jan, a frontend developer from the Rhine-Neckar region. My strength: building digital solutions that are technically precise yet intuitively accessible. To me, great software emerges where aesthetics meet functionality.',
-      'location': 'Whether onsite, remote, or a smart combination: I work where the team is most productive. More important than location to me are clear processes and space for focused work.',
-      'development': 'My expertise lies in modern frontend development. I\'m currently starting to explore backend topics to better understand system architectures. My aim: Not to know everything, but to see how pieces connect.',
-      'innovation': 'I write code that works today and adapts tomorrow. With clean structures for easy maintenance and enough flexibility to evolve with new requirements.'
+      'intro': 'Hi, I\'m Jan, a Fullstack Developer from the Rhine-Neckar region. I love creating visually appealing frontends and connecting them with technically robust systems. The endless possibilities in IT motivate me every day to build new, well-conceived solutions.',
+      'location': 'I\'m flexible in my approach. Whether onsite in the Mannheim/Heidelberg area or remote: I work where the team is most productive. Clear processes and space for focused work are what matters most to me.',
+      'development': 'My solid foundation is in modern Frontend Development. By expanding to Fullstack, I have learned to design applications from the database to the interface. I am always looking for challenges to expand my knowledge and further develop my skills.',
+      'innovation': 'For me, coding is more than just writing code: it\'s a creative approach to problem-solving. I take pride in transforming complex technical challenges into simple, user-friendly solutions that bring your ideas to life.'
     }
   }
 
@@ -56,41 +56,38 @@ export class LanguageService {
   skills: { [key: string]: { [key: string]: string } } = {
     'de': {
       'skills': 'Meine Skills',
-      'experience': 'Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt. Außerdem habe ich erfolgreich im Team gearbeitet, um unsere Ziele zu erreichen.',
+      'experience': 'Ich bringe die Erfahrung mit, Projekte von A bis Z erfolgreich umzusetzen. Meine Stärke liegt in der Entwicklung robuster Fullstack-Architekturen, vom stabilen Backend (Django/Python) bis zum modernen Frontend (Angular/TypeScript). Für mich zählt dabei der technische Erfolg genauso wie das gemeinsame Erreichen der Teamziele.',
       'search': 'Auf der Suche nach',
       'searchHighlight': 'anderen Skills',
       'find': 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein Wissen weiter auszubauen.',
       'button': 'Jetzt anfragen',
       'continue': 'Wissen erweitern',
-      'soon': 'In Kürze',
-      'interest': 'Besondere Interessen in',
-
+      'focus': 'Zukunftsthemen',
     },
     "en": {
       'skills': 'My skills',
-      'experience': 'I have gained experience in developing projects with various frontend technologies and concepts. I have also successfully collaborated with teams to meet our objectives.',
+      'experience': 'I bring the experience to successfully implement projects from start to finish. My strength lies in developing robust fullstack architectures, from a stable backend (Django/Python) to a modern frontend (Angular/TypeScript). For me, technical success matters just as much as achieving team goals together**.',
       'search': 'Looking for',
       'searchHighlight': 'another skill',
       'find': 'Feel free to reach out. I am looking forward to expanding my knowledge further.',
       'button': 'Get in Touch',
       'continue': 'Continue Learning',
-      'soon': 'Coming soon',
-      'interest': 'Special interests in',
+      'focus': 'Future Focus',
     }
   }
 
   portfolio: { [key: string]: { [key: string]: string } } = {
     'de': {
-      'intro': 'Dieser Bereich bietet einen Einblick in eine Auswahl an Projekten, die meine Fähigkeiten in der Frontend-Entwicklung verdeutlichen. Jedes Projekt ist ein Ausdruck technischer Fertigkeiten und kreativen Denkens, das darauf abzielt, benutzerfreundliche Erlebnisse zu schaffen. Die Portfolio-Seite selbst wurde mit Angular umgesetzt, um die Vorzüge und Möglichkeiten dieser modernen Technologie zu präsentieren.',
+      'intro': 'Dieser Bereich bietet einen Einblick in eine Auswahl an Projekten, die meine Fähigkeiten über den gesamten Stack zeigen. Ich lege Wert auf die erfolgreiche Umsetzung von Systemen, bei denen die technische Architektur und eine nutzerfreundliche Experience Hand in Hand gehen.',
       'headerDone': 'Abgeschlossene Projekte',
       'headerCurrent': 'Aktuelle Projekte',
       'headerFuture': 'Geplante Projekte',
     },
     "en": {
-      'intro': 'This section provides insight into a selection of projects that showcase my skills in frontend development. Each project reflects technical abilities and creative thinking aimed at creating user-friendly experiences. This portfolio site has been built using Angular to demonstrate the advantages and capabilities of this modern technology.',
-      'headerDone': 'Done projects',
-      'headerCurrent': 'Current projects',
-      'headerFuture': 'Future projects',
+      'intro': 'This section provides insight into a selection of projects that showcase my capabilities across the entire stack. I focus on the successful implementation of systems where the technical architecture and a user-friendly experience go hand in hand.',
+      'headerDone': 'Completed Projects',
+      'headerCurrent': 'Current Projects',
+      'headerFuture': 'Future Projects',
     }
   }
 
