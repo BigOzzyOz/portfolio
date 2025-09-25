@@ -29,6 +29,8 @@ img {
   width: 400px;
   max-width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 
 .text {

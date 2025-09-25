@@ -10,11 +10,22 @@ export class ProjectService {
 
   doneProjects: Project[] = [
     {
-      name: 'Join',
-      technologies: ['JavaScript', 'Django', 'Django REST Framework', 'HTML', 'CSS'],
+      name: 'Videoflix',
+      technologies: ['Angular', 'Django REST Framework', 'PostgreSQL', 'Redis', 'Docker', 'SCSS'],
       description: {
-        'de': 'Join ist ein objektorientiertes Kanban-Board mit eigenem Backend, das effizientes Aufgabenmanagement ermöglicht. Es bietet eine intuitive Benutzeroberfläche zur Organisation von Aufgaben, zur Fortschrittsverfolgung und zur kollaborativen Teamarbeit.',
-        'en': 'Join is an object-oriented Kanban board with a custom backend, designed for efficient task management. It offers an intuitive interface to organize tasks, track progress, and support collaborative teamwork.',
+        'de': 'Vollständige Video-Streaming-Plattform zur Demonstration der End-to-End-Entwicklung. Das Projekt umfasst die gesamte Architektur: eine dedizierte REST API, Datenbankverwaltung und ein modernes, reaktives Frontend. Fokus lag auf robuster Nutzerauthentifizierung und der Verarbeitung von Medien-Assets.',
+        'en': 'Complete video streaming platform demonstrating end-to-end development. The project covers the entire architecture: a dedicated REST API, database management, and a modern, reactive frontend. Focus was on robust user authentication and media asset processing.',
+      },
+      link: 'https://videoflix.jan-holtschke.de/',
+      gitLink: 'https://github.com/BigOzzyOz/videoflix',
+      img: 'assets/img/videoflix.png'
+    },
+    {
+      name: 'Join',
+      technologies: ['Django REST Framework', 'PostgreSQL', 'Linux (Nginx)', 'Vanilla JS'],
+      description: {
+        'de': 'Vollständiges Fullstack Kanban-Board für effizientes Aufgabenmanagement. Es demonstriert die Entwicklung einer sauberen Frontend-Struktur, die über eine dedizierte REST API mit einer relationalen Datenbank kommuniziert. Schwerpunkt liegt auf der Abbildung komplexer Workflows in einer nutzerfreundlichen Oberfläche.',
+        'en': 'Complete fullstack Kanban board for efficient task management. It demonstrates the development of a clean frontend structure communicating with a relational database via a dedicated REST API. Focus is on mapping complex workflows into a user-friendly interface.',
       },
       link: 'https://join.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/join',
@@ -22,10 +33,10 @@ export class ProjectService {
     },
     {
       name: 'DA Bubble',
-      technologies: ['Angular', 'TypeScript', 'Firebase'],
+      technologies: ['Angular', 'TypeScript', 'Firebase', 'SCSS'],
       description: {
-        de: 'DA Bubble ist ein Slack-Klon, der eine Plattform für die Kommunikation und Zusammenarbeit in Teams bietet. Mit Funktionen wie Nachrichten, Kanälen und Dateifreigabe ermöglicht DA Bubble eine effiziente und benutzerfreundliche Interaktion zwischen den Teammitgliedern.',
-        en: 'DA Bubble is a Slack clone that provides a platform for communication and collaboration within teams. With features such as messaging, channels, and file sharing, DA Bubble enables efficient and user-friendly interaction among team members.',
+        de: 'Echtzeit-Messenger (Slack-Klon) zur Demonstration des Umgangs mit asynchronen Datenströmen und Echtzeit-Updates. Das Projekt nutzt Firebase (Firestore) effizient zur Speicherung und Abfrage von Nachrichten, Usern und Kanälen. Schwerpunkt war komplexes Routing und State-Management.',
+        en: 'Real-time messenger (Slack clone) demonstrating the handling of asynchronous data streams and real-time updates. The project uses Firebase (Firestore) efficiently for storing and querying messages, users, and channels. Focus was complex routing and state management.',
       },
       link: 'https://da-bubble.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/da-bubble',
@@ -33,10 +44,10 @@ export class ProjectService {
     },
     {
       name: 'Coderr',
-      technologies: ['Phython', 'Django', 'Django REST Framework'],
+      technologies: ['Django REST Framework', 'PostgreSQL', 'Linux (Nginx, Gunicorn)'],
       description: {
-        'de': 'Coderr ist eine Freelancer-Plattform im Stil von Fiverr. Das Backend wurde mit Django und der Django REST Framework entwickelt und ermöglicht Funktionen wie das Erstellen von Angeboten, das Annehmen von Aufträgen und das Abgeben von Bewertungen.',
-        'en': 'Coderr is a freelancer platform inspired by Fiverr. The backend was developed using Django and Django REST Framework and supports features such as creating offers, handling orders, and submitting reviews.',
+        'de': 'Das reine Backend für ein Social-Media-Netzwerk. Dieses Projekt stellt das Verständnis von API-Design und Datenbank-Modellierung unter Beweis. Implementierung einer robusten REST-API mit Custom Views, komplexen Many-to-Many-Beziehungen und korrekter Authentifizierung.',
+        'en': 'The pure backend for a social media network. This project demonstrates proficiency in API design and database modeling. It implements a robust REST API with custom views, complex many-to-many relationships, and correct authentication.',
       },
       link: 'https://coderr.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/be-coderr',
@@ -44,10 +55,10 @@ export class ProjectService {
     },
     {
       name: 'Sharkie',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
+      technologies: ['JavaScript', 'HTML Canvas', 'CSS'],
       description: {
-        'de': 'Sharkie ist ein 2D-Sidescroller-Spiel, in dem der Spieler Münzen und Gift sammeln muss, um den Orca zu besiegen. Dabei gilt es, Quallen und Kugelfischen auszuweichen, um das Ziel zu erreichen.',
-        'en': 'Sharkie is a 2D side-scroller game where players must collect coins and poison to defeat the Orca. Along the way, they must avoid jellyfish and pufferfish to reach their goal.',
+        'de': 'Ein 2D-Jump-and-Run-Spiel. Das Hauptziel war die Demonstration fortgeschrittener Objektorientierter Programmierung (OOP) in JavaScript. Das Projekt beweist die Fähigkeit zur Strukturierung komplexer Logik durch Klassen, Kapselung und Vererbung essentielle Fähigkeiten für jede große Codebasis.',
+        'en': 'A 2D jump-and-run game. The main goal was to demonstrate advanced Object-Oriented Programming (OOP) in JavaScript. The project proves the ability to structure complex logic using classes, encapsulation, and inheritance essential skills for any large codebase.',
       },
       link: 'https://sharkie.jan-holtschke.de/',
       gitLink: 'https://github.com/BigOzzyOz/sharkie_game',
