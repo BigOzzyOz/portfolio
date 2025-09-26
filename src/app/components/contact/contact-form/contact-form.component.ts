@@ -33,7 +33,7 @@ export class ContactFormComponent {
   });
 
   post = {
-    endPoint: 'https://jan-holtschke.de/sendMail.php',
+    endPoint: 'https://jan-holtschke.de/sendmail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
