@@ -29,6 +29,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "sourceMap": true,
             "styles": [
               "src/style/styles.scss"
             ],
