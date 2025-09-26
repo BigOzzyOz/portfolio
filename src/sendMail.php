@@ -20,19 +20,38 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $privacy = $params->privacy;
     
             $recipient = 'kontakt@jan-holtschke.de';  
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $subject = "Nachricht aus deinem Portfolio";
+            $message = "
+                <h2>Neue Nachricht über dein Portfolio</h2>
+                <p><strong>Name:</strong> $name</p>
+                <p><strong>E-Mail:</strong> $email</p>
+                <p><strong>Nachricht:</strong><br>$message</p>
+                <p>Diese Nachricht wurde über das Kontaktformular deines Portfolios gesendet.</p>
+                <p><strong>Datenschutz akzeptiert:</strong> " . ($privacy ? 'Ja' : 'Nein') . "</p>
+            ";
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
-
-            // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
-
-            mail($recipient, $subject, $message, implode("\r\n", $headers));
+            $headers[] = "From: noreply@jan-holtschke.de";
+            
+            if (empty($email) || empty($name) || empty($message)) {
+                http_response_code(400);
+                echo "Missing required fields.";
+                exit;
+            }
+            
+            $headers[] = "Reply-To: $email";
+    
+            if (mail($recipient, $subject, $message, implode("\r\n", $headers))) {
+                http_response_code(200);
+                echo "Message sent successfully.";
+            } else {
+                http_response_code(500);
+                echo "Failed to send message.";
+            }
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
             exit;
-    } 
+    }
